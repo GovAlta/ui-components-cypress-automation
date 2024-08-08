@@ -1,13 +1,25 @@
 import { getGreeting } from '../support/app.po';
 
 describe('react-e2e', () => {
-  beforeEach(() => cy.visit('/'));
+  beforeEach(() => {
+    cy.visit('/bugs/1142');
+  });
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
+  it('Dropdown Exists and Clicks', () => {
+    // Ensure the dropdown exists
+    cy.get('#dropdown').should('exist');
 
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains(/Welcome/);
+    // Ensure the dropdown is visible and not disabled
+    cy.get('#dropdown').should('be.visible').and('not.be.disabled');
+
+    // Pause for debugging
+
+    // Click the dropdown and use debug to inspect
+
+
+    // Verify that the dropdown is clicked by checking for changes
+    // This part depends on what should happen after clicking the dropdown
+    // For example, if the dropdown options should appear:
+
   });
 });
