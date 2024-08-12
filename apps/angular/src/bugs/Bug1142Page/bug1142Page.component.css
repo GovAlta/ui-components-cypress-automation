@@ -1,0 +1,17 @@
+.example-additional-selection {
+  opacity: 0.75;
+  font-size: 0.75em;
+}
+.container {
+  margin: 40px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.container {
+  display: flex;
+  column-gap: 4rem;
+}
+.container select, .container goa-dropdown {
+  width: 180px;
+}

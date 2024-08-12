@@ -1,1 +1,44 @@
-<!-- HTML content for bug1142Page.component.html -->
+<style>
+
+</style>
+
+<div class="container">
+
+  <goa-form-item label="Dropdown With Empty String Value">
+    <goa-dropdown
+      goaValue
+      native
+      [formControl]="formControl"
+      [value]="formControl.value"
+      id="dropdown-empty"
+    >
+      <goa-dropdown-item
+        *ngFor="let opt of optionsEmpty"
+        [value]="opt.value"
+        [label]="opt.label"
+      ></goa-dropdown-item>
+    </goa-dropdown>
+  </goa-form-item>
+
+  <goa-form-item label="Dropdown Native">
+    <goa-dropdown
+      goaValue
+      native
+      [formControl]="formControl"
+      [value]="formControl.value"
+      id="dropdown-null"
+    >
+      <goa-dropdown-item
+        *ngFor="let opt of optionsNull"
+        [value]="opt.value"
+        [label]="opt.label"
+      ></goa-dropdown-item>
+    </goa-dropdown>
+  </goa-form-item>
+  <br />
+
+
+<br />
+
+<goa-button testid="reset-button-shadow" id="reset-button" (_click)="reset()">Reset</goa-button>
+</div>

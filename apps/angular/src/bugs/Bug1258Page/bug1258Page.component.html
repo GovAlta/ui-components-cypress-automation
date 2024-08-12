@@ -1,0 +1,30 @@
+<style>
+  .container {
+    display: flex;
+    column-gap: 4rem;
+  }
+  .container select, .container goa-dropdown {
+    width: 180px;
+  }
+</style>
+
+<div class="container">
+  <div>
+    <h2>GoA Dropdown</h2>
+    <goa-dropdown
+      goaValue
+      [formControl]="formControl"
+      [value]="formControl.value"
+    >
+      <goa-dropdown-item
+        *ngFor="let opt of options"
+        [value]="opt.value"
+        [label]="opt.label"
+      ></goa-dropdown-item>
+    </goa-dropdown>
+  </div>
+
+
+</div>
+<br />
+<goa-button (_click)="reset()">Reset</goa-button>

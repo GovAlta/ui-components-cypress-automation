@@ -75,7 +75,7 @@ export default function Bug${bugNumber}Page(props) {
 }
 
 function updateAngularRoutingModule(bugNumber) {
-  const routingModulePath = path.join('apps', 'angular', 'src', 'app', 'app-routing.module.ts');
+  const routingModulePath = path.join('apps', 'angular', 'src', 'app', 'app.routes.ts');
 
   if (!fs.existsSync(routingModulePath)) {
     console.error(`Routing module not found at ${routingModulePath}`);

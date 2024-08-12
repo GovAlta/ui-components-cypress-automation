@@ -1,14 +1,19 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import {Component, OnInit} from "@angular/core";
+import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 
 @Component({
-  standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styles: ``,
 })
-export class AppComponent {
-  title = 'angular';
+export class AppComponent implements OnInit {
+
+
+  constructor(
+    private fb: FormBuilder,
+  ) {
+  }
+  ngOnInit() {
+  }
+
 }
