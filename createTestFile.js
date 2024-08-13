@@ -159,7 +159,7 @@ function updateReactMainTsx(bugNumber) {
   let mainTsxContent = fs.readFileSync(mainTsxPath, 'utf-8');
 
   const importStatement = `import Bug${bugNumber}Page from "./bugs/Bug${bugNumber}Page";`;
-  const routeConfig = `<Route path="/bugs/${bugNumber}" element={<Bug${bugNumber}Page />}></Route>`;
+  const routeConfig = `<Route path="/bug${bugNumber}" element={<Bug${bugNumber}Page />}></Route>`;
 
   if (!mainTsxContent.includes(importStatement)) {
     const importPosition = mainTsxContent.indexOf('const root = ReactDOM.createRoot(');
@@ -190,7 +190,7 @@ function updateReactAppTsx(bugNumber) {
   }
 
   let appTsxContent = fs.readFileSync(appTsxPath, 'utf-8');
-  const newLink = `            <Link to="/bugs/${bugNumber}">${bugNumber}</Link>`;
+  const newLink = `            <Link to="/bug${bugNumber}">${bugNumber}</Link>`;
 
   const insertBefore = '{/* Add links here */}';
   const insertPosition = appTsxContent.indexOf(insertBefore);

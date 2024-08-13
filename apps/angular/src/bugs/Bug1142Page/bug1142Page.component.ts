@@ -41,3 +41,4 @@ export class Bug1142PageComponent {
     this.formControl.setValue('');
   }
 }
+//Write Test for Native, and empty value

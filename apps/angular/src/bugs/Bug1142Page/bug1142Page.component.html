@@ -20,7 +20,7 @@
     </goa-dropdown>
   </goa-form-item>
 
-  <goa-form-item label="Dropdown Native">
+  <goa-form-item label="Dropdown">
     <goa-dropdown
       goaValue
       native
@@ -37,6 +37,14 @@
   </goa-form-item>
   <br />
 
+  <div>
+    <h2>Native Select</h2>
+    <select [formControl]="formControl" [value]="formControl.value">
+      <option *ngFor="let opt of optionsNull" [value]="opt.value">
+        {{ opt.label }}
+      </option>
+    </select>
+  </div>
 
 <br />
 
