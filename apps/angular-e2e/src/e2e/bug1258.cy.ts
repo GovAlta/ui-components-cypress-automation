@@ -9,7 +9,7 @@ describe('Verify page load and check console for errors', () => {
     // Visit the page
     cy.visit('/bug1258')
     // Assert that the page has loaded by checking a visible element
-    cy.get('#dropdown-target').shadow().find('select').should('be.visible');
+    cy.get('#dropdown-target').shadow().find('input').click();
 
     // Listen to console errors
     cy.on('window:before:load', (win) => {
