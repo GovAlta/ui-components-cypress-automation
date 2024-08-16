@@ -21,24 +21,61 @@ export class Bug1142PageComponent {
     { value: 'opt4', label: 'Option 4' },
   ];
 
-  public formControl = new FormControl<string | null>(null);
-  public selectedValue: string | null = null;
+  public formControlEmptyNative = new FormControl<string | null>(null);
+  public formControlEmptyNonNative = new FormControl<string | null>(null);
+  public formControlNullNative = new FormControl<string | null>(null);
+  public formControlNullNonNative = new FormControl<string | null>(null);
+  public formControlNative = new FormControl<string | null>(null);
 
   constructor() {}
 
   ngOnInit(): void {
-    this.formControl.valueChanges.subscribe((value) => {
-      console.log(`Received value: ${value}`);
-
+    this.formControlEmptyNative.valueChanges.subscribe((value) => {
+      console.log(`formControlEmptyNative Received value: ${value}`);
       if (!value) {
         return;
       }
-
+    });
+    this.formControlEmptyNonNative.valueChanges.subscribe((value) => {
+      console.log(`formControlEmptyNonNative Received value: ${value}`);
+      if (!value) {
+        return;
+      }
+    });
+    this.formControlNullNative.valueChanges.subscribe((value) => {
+      console.log(`formControlNullNative Received value: ${value}`);
+      if (!value) {
+        return;
+      }
+    });
+    this.formControlNullNonNative.valueChanges.subscribe((value) => {
+      console.log(`formControlNullNonNative Received value: ${value}`);
+      if (!value) {
+        return;
+      }
+    });
+    this.formControlNative.valueChanges.subscribe((value) => {
+      console.log(`formControlNative Received value: ${value}`);
+      if (!value) {
+        return;
+      }
     });
   }
 
-  reset() {
-    this.formControl.setValue('');
+  formControlEmptyNativeReset() {
+    this.formControlEmptyNative.setValue('');
+  }
+  formControlEmptyNonNativeReset() {
+    this.formControlEmptyNonNative.setValue('');
+  }
+  formControlNullNativeReset() {
+    this.formControlNullNative.setValue('');
+  }
+  formControlNullNonNativeReset() {
+    this.formControlNullNonNative.setValue('');
+  }
+  formControlNativeReset() {
+    this.formControlNative.setValue('');
   }
 }
 //Write Test for Native, and empty value

@@ -1,16 +1,22 @@
-<style>
+<goa-container>
+  <p> For this issue, there are 4 cases </p>
+  <p> 1 - goa-dropdown is native and have an option of '' </p>
+  <p> 2 - goa-dropdown is not native and have an option of '' </p>
+  <p> 3 - goa-dropdown is native and do not have an option of '' </p>
+  <p> 4 - goa-dropdown is not native and do not have an option of '' </p>
+  <p> For All 4 cases when reset is clicked, the dropdown should display an option of '' </p>
+</goa-container>
 
-</style>
+<goa-container><goa-grid>
 
-<div class="container">
 
-  <goa-form-item label="Dropdown With Empty String Value">
+  <goa-form-item label="Dropdown Native With Empty String Value">
     <goa-dropdown
       goaValue
       native
-      [formControl]="formControl"
-      [value]="formControl.value"
-      id="dropdown-empty"
+      [formControl]="formControlEmptyNative"
+      [value]="formControlEmptyNative.value"
+      id="dropdown-empty-native"
     >
       <goa-dropdown-item
         *ngFor="let opt of optionsEmpty"
@@ -19,14 +25,39 @@
       ></goa-dropdown-item>
     </goa-dropdown>
   </goa-form-item>
+  <goa-button testid="dropdown-empty-native-reset-button-shadow" id="dropdown-empty-native-reset-button" (_click)="formControlEmptyNativeReset()">Reset</goa-button>
 
-  <goa-form-item label="Dropdown">
+</goa-grid></goa-container>
+
+<goa-container><goa-grid>
+
+  <goa-form-item label="Dropdown Not Native With Empty String Value">
+    <goa-dropdown
+      goaValue
+      [formControl]="formControlEmptyNonNative"
+      [value]="formControlEmptyNonNative.value"
+      id="dropdown-empty-non-native"
+    >
+      <goa-dropdown-item
+        *ngFor="let opt of optionsEmpty"
+        [value]="opt.value"
+        [label]="opt.label"
+      ></goa-dropdown-item>
+    </goa-dropdown>
+  </goa-form-item>
+  <goa-button testid="dropdown-empty-non-native-reset-button-shadow" id="dropdown-empty-non-native-reset-button" (_click)="formControlEmptyNonNativeReset()">Reset</goa-button>
+
+</goa-grid></goa-container>
+
+<goa-container><goa-grid>
+
+  <goa-form-item label="Dropdown Native Without Empty String Value">
     <goa-dropdown
       goaValue
       native
-      [formControl]="formControl"
-      [value]="formControl.value"
-      id="dropdown-null"
+      [formControl]="formControlNullNative"
+      [value]="formControlNullNative.value"
+      id="dropdown-null-native"
     >
       <goa-dropdown-item
         *ngFor="let opt of optionsNull"
@@ -35,18 +66,43 @@
       ></goa-dropdown-item>
     </goa-dropdown>
   </goa-form-item>
-  <br />
+  <goa-button testid="dropdown-null-native-reset-button-shadow" id="dropdown-null-native-reset-button" (_click)="formControlNullNativeReset()">Reset</goa-button>
 
+</goa-grid></goa-container>
+
+<goa-container><goa-grid>
+
+  <goa-form-item label="Dropdown Non Native Without Empty String Value">
+    <goa-dropdown
+      goaValue
+      [formControl]="formControlNullNonNative"
+      [value]="formControlNullNonNative.value"
+      id="dropdown-null-non-native"
+    >
+      <goa-dropdown-item
+        *ngFor="let opt of optionsNull"
+        [value]="opt.value"
+        [label]="opt.label"
+      ></goa-dropdown-item>
+    </goa-dropdown>
+
+
+  </goa-form-item>
+
+  <goa-button testid="dropdown-null-non-native-reset-button-shadow" id="dropdown-null-non-native-reset-button" (_click)="formControlNullNonNativeReset()">Reset</goa-button>
+
+</goa-grid></goa-container>
+
+<goa-container><goa-grid>
   <div>
     <h2>Native Select</h2>
-    <select [formControl]="formControl" [value]="formControl.value">
+    <select [formControl]="formControlNative" [value]="formControlNative.value">
       <option *ngFor="let opt of optionsNull" [value]="opt.value">
         {{ opt.label }}
       </option>
     </select>
   </div>
+  <goa-button testid="reset-button-shadow" id="reset-button" (_click)="formControlNativeReset()">Reset</goa-button>
 
-<br />
-
-<goa-button testid="reset-button-shadow" id="reset-button" (_click)="reset()">Reset</goa-button>
-</div>
+</goa-grid>
+</goa-container>

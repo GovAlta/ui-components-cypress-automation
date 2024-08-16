@@ -1,0 +1,30 @@
+<goa-container>
+  <p> When Enter Key is pressed, option is selected, and dropdown is closed</p>
+</goa-container>
+
+
+<goa-container>
+
+
+  <goa-form-item label="Dropdown">
+    <goa-dropdown
+      goaValue
+      native
+      [formControl]="formControl"
+      [value]="formControl.value"
+      id="dropdown"
+    >
+      <goa-dropdown-item
+        *ngFor="let opt of options"
+        [value]="opt.value"
+        [label]="opt.label"
+      ></goa-dropdown-item>
+    </goa-dropdown>
+  </goa-form-item>
+
+  <select [formControl]="formControl" [value]="formControl.value" id="select">
+    <option *ngFor="let opt of options" [value]="opt.value">
+      {{ opt.label }}
+    </option>
+  </select>
+</goa-container>

@@ -7,31 +7,43 @@ import { FormControl } from '@angular/forms';
 })
 export class Bug1258PageComponent {
   public options = [
-      { value: '', label: '' },
-      { value: 'opt1', label: 'Option 1' },
-      { value: 'opt2', label: 'Option 2' },
-      { value: 'opt3', label: 'Option 3' },
-      { value: 'opt4', label: 'Option 4' },
-    ];
+    { value: '', label: '' },
+    { value: 'opt1', label: 'Option 1' },
+    { value: 'opt2', label: 'Option 2' },
+    { value: 'opt3', label: 'Option 3' },
+    { value: 'opt4', label: 'Option 4' },
+  ];
 
-    public formControl = new FormControl<string | null>(null);
-    public selectedValue: string | null = null;
+  public formControlNative = new FormControl<string | null>(null);
+  public formControlNonNative = new FormControl<string | null>(null);
 
-    constructor() {}
+  public formControlNativeValue: string | null = '';
+  public formControlNonNativeValue: string | null = '';
+  constructor() {}
 
-    ngOnInit(): void {
-      this.formControl.valueChanges.subscribe((value) => {
-        console.log(`Received value: ${value}`);
+  ngOnInit(): void {
+    this.formControlNative.valueChanges.subscribe((value) => {
+      this.formControlNativeValue = value;
+      if (!value) {
+        return;
+      }
+    });
+    this.formControlNonNative.valueChanges.subscribe((value) => {
+      this.formControlNonNativeValue = value;
+      if (!value) {
+        return;
+      }
+    });
 
-        if (!value) {
-          return;
-        }
 
-        //setTimeout(() => this.formControl.setValue(''), 100);
-      });
-    }
+  }
 
-    reset() {
-      this.formControl.setValue('');
-    }
+  formControlNativeReset() {
+    this.formControlNative.setValue('');
+  }
+  formControlNonNativeReset() {
+    this.formControlNonNative.setValue('');
+  }
+
 }
+//Write Test for Native, and empty value

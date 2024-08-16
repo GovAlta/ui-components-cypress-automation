@@ -1,20 +1,20 @@
-<style>
-  .container {
-    display: flex;
-    column-gap: 4rem;
-  }
-  .container select, .container goa-dropdown {
-    width: 180px;
-  }
-</style>
+<goa-container>
+  <p> For this issue, there are 2 cases </p>
+  <p> 1 - goa-dropdown is native </p>
+  <p> 2 - goa-dropdown is not native  </p>
+  <p> For All 2 cases when a option is selected, then reset, then select the same option again, on change should fire </p>
+</goa-container>
 
-<div class="container">
-  <div>
-    <h2>GoA Dropdown</h2>
+<goa-container><goa-grid>
+
+
+  <goa-form-item label="Dropdown Native With Empty String Value">
     <goa-dropdown
       goaValue
-      [formControl]="formControl"
-      [value]="formControl.value"
+      native
+      [formControl]="formControlNative"
+      [value]="formControlNative.value"
+      id="dropdown-native"
     >
       <goa-dropdown-item
         *ngFor="let opt of options"
@@ -22,9 +22,28 @@
         [label]="opt.label"
       ></goa-dropdown-item>
     </goa-dropdown>
-  </div>
+  </goa-form-item>
+  <goa-button testid="dropdown-native-reset-button-shadow" id="dropdown-native-reset-button" (_click)="formControlNativeReset()">Reset</goa-button>
+  <p id="dropdown-native-value">For Value for dropdown-native-value is    {{ formControlNativeValue }}</p>
+</goa-grid></goa-container>
 
+<goa-container><goa-grid>
 
-</div>
-<br />
-<goa-button (_click)="reset()">Reset</goa-button>
+  <goa-form-item label="Dropdown Not Native With Empty String Value">
+    <goa-dropdown
+      goaValue
+      [formControl]="formControlNonNative"
+      [value]="formControlNonNative.value"
+      id="dropdown-non-native"
+    >
+      <goa-dropdown-item
+        *ngFor="let opt of options"
+        [value]="opt.value"
+        [label]="opt.label"
+      ></goa-dropdown-item>
+    </goa-dropdown>
+  </goa-form-item>
+  <goa-button testid="dropdown-non-native-reset-button-shadow" id="dropdown-non-native-reset-button" (_click)="formControlNonNativeReset()">Reset</goa-button>
+  <p id="dropdown-non-native-value">For Value for dropdown-non-native-value is    {{ formControlNonNativeValue }}</p>
+
+</goa-grid></goa-container>

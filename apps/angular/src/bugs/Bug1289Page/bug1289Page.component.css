@@ -1,0 +1,7 @@
+
+.absolute-container {
+  position: absolute; /* Ensure the parent has relative positioning */
+  top: 100%;
+  border: solid 2px #eee;
+  background-color: red;
+}

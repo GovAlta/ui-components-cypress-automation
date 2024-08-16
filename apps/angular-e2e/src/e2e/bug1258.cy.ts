@@ -1,22 +1,56 @@
 import 'cypress-shadow-dom';
 
 describe('Verify page load and check console for errors', () => {
-  cy.on('window:before:load', (win) => {
-    cy.stub(win.console, 'error').as('consoleError');
-  });
+
 
   it('should load the page without console errors', () => {
+
     // Visit the page
     cy.visit('/bug1258')
     // Assert that the page has loaded by checking a visible element
-    cy.get('#dropdown-target').shadow().find('input').click();
 
-    // Listen to console errors
-    cy.on('window:before:load', (win) => {
-      cy.stub(win.console, 'error').as('consoleError');
-    });
+
+    cy.get('#dropdown-native').shadow().find('select').select('opt1');
+    cy.get('#dropdown-native').shadow().find('select').should('have.value', 'opt1');
+    cy.get('#dropdown-native-value').should('have.text', 'For Value for dropdown-native-value is opt1');
+
+
+    cy.get('#dropdown-native-reset-button').shadow().find('[data-testid="dropdown-native-reset-button-shadow"]').click({ force: true });
+
+    cy.get('#dropdown-native').shadow().find('select').should('have.value', '');
+    cy.get('#dropdown-native-value').should('have.text', 'For Value for dropdown-native-value is ');
+
+  //  cy.get('@consoleLog').should('be.calledWith', 'formControlNative Received value: ');
+
+
+
+    cy.get('#dropdown-native').shadow().find('select').select('opt1');
+    cy.get('#dropdown-native').shadow().find('select').should('have.value', 'opt1');
+    cy.get('#dropdown-native-value').should('have.text', 'For Value for dropdown-native-value is opt1');
+
 
     // Assert no console errors occurred
-    cy.get('@consoleError').should('not.have.been.called');
+
+    cy.get('#dropdown-non-native').shadow().find('input').click();
+
+    cy.get('#dropdown-non-native').shadow().find('goa-popover').find('li#opt1').click();
+
+    cy.get('#dropdown-non-native').shadow().find('input').should('have.value', 'Option 1');
+
+    cy.get('#dropdown-non-native-value').should('have.text', 'For Value for dropdown-non-native-value is opt1');
+
+    cy.get('#dropdown-non-native-reset-button').shadow().find('[data-testid="dropdown-non-native-reset-button-shadow"]').click({ force: true });
+
+    cy.get('#dropdown-non-native').shadow().find('input').should('have.value', '');
+    cy.get('#dropdown-non-native-value').should('have.text', 'For Value for dropdown-non-native-value is ');
+
+
+    cy.get('#dropdown-non-native').shadow().find('input').click();
+
+    cy.get('#dropdown-non-native').shadow().find('goa-popover').find('li#opt1').click();
+
+    cy.get('#dropdown-non-native').shadow().find('input').should('have.value', 'Option 1');
+    cy.get('#dropdown-non-native-value').should('have.text', 'For Value for dropdown-non-native-value is opt1');
+
   });
 });

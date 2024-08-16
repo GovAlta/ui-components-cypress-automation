@@ -1,0 +1,9 @@
+  <div class="absolute-container ">
+    <goa-dropdown name="item" value="" (_change)="onChange($event)" id="dropdown" relative=true>
+      <goa-dropdown-item
+        *ngFor="let opt of options"
+        [value]="opt.value"
+        [label]="opt.label"
+      ></goa-dropdown-item>
+    </goa-dropdown>
+  </div>
