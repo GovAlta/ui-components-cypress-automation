@@ -11,6 +11,7 @@ import { Bug2033PageComponent } from "apps/angular/src/bugs/Bug2033Page/bug2033P
 import { Bug1289PageComponent } from "apps/angular/src/bugs/Bug1289Page/bug1289Page.component";
 import { Bug1307PageComponent } from "apps/angular/src/bugs/Bug1307Page/bug1307Page.component";
 import { Bug1319PageComponent } from "apps/angular/src/bugs/Bug1319Page/bug1319Page.component";
+
 /*Add New Import Here*/
 
 export const appRoutes: Route[] = [
@@ -24,6 +25,7 @@ export const appRoutes: Route[] = [
 { path: "bug1289", component: Bug1289PageComponent },
 { path: "bug1307", component: Bug1307PageComponent },
 { path: "bug1319", component: Bug1319PageComponent },
+
 /*Add New Route Here*/
 ];
 @NgModule({

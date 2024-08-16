@@ -13,6 +13,7 @@
         "outputPath": "dist/apps/angular",
         "index": "apps/angular/src/index.html",
         "browser": "apps/angular/src/main.ts",
+        "preserveSymlinks": true,
         "polyfills": ["zone.js"],
         "tsConfig": "apps/angular/tsconfig.app.json",
         "assets": [

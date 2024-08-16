@@ -16,6 +16,7 @@ import { Bug2033PageComponent } from "apps/angular/src/bugs/Bug2033Page/bug2033P
 import { Bug1289PageComponent } from "apps/angular/src/bugs/Bug1289Page/bug1289Page.component";
 import { Bug1307PageComponent } from "apps/angular/src/bugs/Bug1307Page/bug1307Page.component";
 import { Bug1319PageComponent } from "apps/angular/src/bugs/Bug1319Page/bug1319Page.component";
+
 /*Add New Import Here*/
 @NgModule({
   declarations: [
@@ -28,7 +29,6 @@ import { Bug1319PageComponent } from "apps/angular/src/bugs/Bug1319Page/bug1319P
     Bug2033PageComponent,
     Bug1289PageComponent,
     Bug1307PageComponent,
-    Bug1319PageComponent,
     /*Add New Declarations Here*/
   ],
   imports: [

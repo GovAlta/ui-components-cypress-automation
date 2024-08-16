@@ -1,6 +1,6 @@
 import 'cypress-shadow-dom';
-    // Assert no console errors occurred
-describe('angular-e2e', () => {
+
+describe('react-e2e', () => {
   it('first page should be visible', () => {
       cy.visit('/bug2033');
       cy.wait(1000);
