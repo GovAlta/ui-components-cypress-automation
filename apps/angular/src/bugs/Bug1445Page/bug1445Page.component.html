@@ -1,0 +1,29 @@
+<goa-form-item
+        label="Color"
+        requirement="required"
+        id="form-item"
+	[error]="colorFormCtrl.hasError('required') && colorFormCtrl.touched ? 'You must select a color.' : null"
+>
+     <goa-dropdown
+           goaValue
+           name="colors"
+           [formControl]="colorFormCtrl"
+           [error]="colorFormCtrl.hasError('required') && colorFormCtrl.touched"
+           [value]="colorFormCtrl.value"
+          id="dropdown"
+     >
+          <goa-dropdown-item
+               *ngFor="let color of colors"
+               [value]="color"
+              [label]="color"
+         >
+        </goa-dropdown-item>
+     </goa-dropdown>
+</goa-form-item>
+
+
+
+<goa-block gap="m">
+  <goa-button (_click)="onCancel()" type="secondary">Cancel</goa-button>
+  <goa-button testid="dropdown-save-button-shadow" id="dropdown-save-button" (_click)="onSubmit()" type="primary">Save</goa-button>
+</goa-block>

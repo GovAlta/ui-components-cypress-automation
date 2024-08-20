@@ -1,0 +1,22 @@
+<goa-form-item label="On Change Function">
+  <goa-dropdown name="onChange" value="" (_change)="onChange($event)" id="dropdown-on-change">
+    <goa-dropdown-item *ngFor="let opt of options"
+      [value]="opt.value"
+      [label]="opt.label"
+    ></goa-dropdown-item>
+  </goa-dropdown>
+
+</goa-form-item>
+
+<goa-form-item label="On Change Function">
+
+<goa-dropdown goaValue [formControl]="formControl" id="dropdown-form-control">
+  <goa-dropdown-item *ngFor="let opt of options"
+    [value]="opt.value"
+    [label]="opt.label"
+  ></goa-dropdown-item>
+</goa-dropdown>
+</goa-form-item>
+
+<p id="on-change-initial-value">on change initial value is {{onChangeInitialValue.toString()}}</p>
+<p id="form-control-initial-value">form control initial value is {{formControlInitialValue.toString()}}</p>
