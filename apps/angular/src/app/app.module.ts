@@ -19,6 +19,9 @@ import { Bug1319PageComponent } from "apps/angular/src/bugs/Bug1319Page/bug1319P
 
 import { Bug1378PageComponent } from "apps/angular/src/bugs/Bug1378Page/bug1378Page.component";
 import { Bug1445PageComponent } from "apps/angular/src/bugs/Bug1445Page/bug1445Page.component";
+import { Bug1679PageComponent } from "apps/angular/src/bugs/Bug1679Page/bug1679Page.component";
+import { Bug1698PageComponent } from "apps/angular/src/bugs/Bug1698Page/bug1698Page.component";
+import { Bug1702PageComponent } from "apps/angular/src/bugs/Bug1702Page/bug1702Page.component";
 /*Add New Import Here*/
 @NgModule({
   declarations: [
@@ -34,6 +37,9 @@ import { Bug1445PageComponent } from "apps/angular/src/bugs/Bug1445Page/bug1445P
     Bug1319PageComponent,
     Bug1378PageComponent,
     Bug1445PageComponent,
+    Bug1679PageComponent,
+    Bug1698PageComponent,
+    Bug1702PageComponent,
     /*Add New Declarations Here*/
   ],
   imports: [
