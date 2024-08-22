@@ -1,0 +1,95 @@
+<goa-container accent="thick" padding="relaxed" width="full" id="container">
+  <h2>
+    Container One
+  </h2>
+  <goa-dropdown value="" id="container-dropdown">
+    <goa-dropdown-item value="red" label="Red"></goa-dropdown-item>
+    <goa-dropdown-item value="green" label="Green"></goa-dropdown-item>
+    <goa-dropdown-item value="blue" label="Blue"></goa-dropdown-item>
+  </goa-dropdown>
+
+  <goa-form-item label="Basic" id="container-input">
+    <goa-input name="item"></goa-input>
+  </goa-form-item>
+
+</goa-container>
+
+
+<goa-accordion heading="Heading" headingsize="medium"  id="accordion">
+  <h2>
+    Accordion One
+  </h2>
+  <goa-dropdown value="" id="accordion-dropdown">
+    <goa-dropdown-item value="red" label="Red"></goa-dropdown-item>
+    <goa-dropdown-item value="green" label="Green"></goa-dropdown-item>
+    <goa-dropdown-item value="blue" label="Blue"></goa-dropdown-item>
+  </goa-dropdown>
+
+  <goa-form-item label="Basic" id="accordion-input">
+    <goa-input name="item"></goa-input>
+  </goa-form-item>
+</goa-accordion>
+
+<goa-callout type="information"  id="callout">
+  <h2>
+    callout One
+  </h2>
+  <goa-dropdown value="" id="callout-dropdown">
+    <goa-dropdown-item value="red" label="Red"></goa-dropdown-item>
+    <goa-dropdown-item value="green" label="Green"></goa-dropdown-item>
+    <goa-dropdown-item value="blue" label="Blue"></goa-dropdown-item>
+  </goa-dropdown>
+
+  <goa-form-item label="Basic" id="callout-input">
+    <goa-input name="item"></goa-input>
+  </goa-form-item>
+</goa-callout>
+
+<goa-details heading="Detail Heading"  id="details">
+  <h2>
+    details One
+  </h2>
+  <goa-dropdown value="" id="details-dropdown">
+    <goa-dropdown-item value="red" label="Red"></goa-dropdown-item>
+    <goa-dropdown-item value="green" label="Green"></goa-dropdown-item>
+    <goa-dropdown-item value="blue" label="Blue"></goa-dropdown-item>
+  </goa-dropdown>
+
+  <goa-form-item label="Basic" id="details-input">
+    <goa-input name="item"></goa-input>
+  </goa-form-item>
+</goa-details>
+
+<goa-hero-banner heading="Heading"  id="hero-banner">
+  <h2>
+    hero banner One
+  </h2>
+  <goa-dropdown value="" id="hero-banner-dropdown">
+    <goa-dropdown-item value="red" label="Red"></goa-dropdown-item>
+    <goa-dropdown-item value="green" label="Green"></goa-dropdown-item>
+    <goa-dropdown-item value="blue" label="Blue"></goa-dropdown-item>
+  </goa-dropdown>
+
+  <goa-form-item label="Basic" id="hero-banner-input">
+    <goa-input name="item"></goa-input>
+  </goa-form-item>
+
+</goa-hero-banner>
+
+<goa-button (_click)="onClick($event)">
+  Show Modal
+</goa-button>
+<goa-modal heading="Are you sure you want to exit your application?" role="alertdialog" [open]="open" closable>
+  <h2>
+    modal One
+  </h2>
+  <goa-dropdown value="" id="modal-dropdown">
+    <goa-dropdown-item value="red" label="Red"></goa-dropdown-item>
+    <goa-dropdown-item value="green" label="Green"></goa-dropdown-item>
+    <goa-dropdown-item value="blue" label="Blue"></goa-dropdown-item>
+  </goa-dropdown>
+
+  <goa-form-item label="Basic" id="modal-input">
+    <goa-input name="item"></goa-input>
+  </goa-form-item>
+</goa-modal>

@@ -1,0 +1,5 @@
+.full-height-minus-40px {
+    height: calc(100vh - 43px);
+    width: 100%; /* Optional: makes the div span the full width of the window */
+    background-color: yellow;
+}

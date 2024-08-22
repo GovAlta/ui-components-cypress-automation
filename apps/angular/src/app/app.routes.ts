@@ -17,6 +17,9 @@ import { Bug1445PageComponent } from "apps/angular/src/bugs/Bug1445Page/bug1445P
 import { Bug1679PageComponent } from "apps/angular/src/bugs/Bug1679Page/bug1679Page.component";
 import { Bug1698PageComponent } from "apps/angular/src/bugs/Bug1698Page/bug1698Page.component";
 import { Bug1702PageComponent } from "apps/angular/src/bugs/Bug1702Page/bug1702Page.component";
+import { Bug1734PageComponent } from "apps/angular/src/bugs/Bug1734Page/bug1734Page.component";
+import { Bug1739PageComponent } from "apps/angular/src/bugs/Bug1739Page/bug1739Page.component";
+import { Bug1758PageComponent } from "apps/angular/src/bugs/Bug1758Page/bug1758Page.component";
 /*Add New Import Here*/
 
 export const appRoutes: Route[] = [
@@ -36,6 +39,9 @@ export const appRoutes: Route[] = [
 { path: "bug1679", component: Bug1679PageComponent },
 { path: "bug1698", component: Bug1698PageComponent },
 { path: "bug1702", component: Bug1702PageComponent },
+{ path: "bug1734", component: Bug1734PageComponent },
+{ path: "bug1739", component: Bug1739PageComponent },
+{ path: "bug1758", component: Bug1758PageComponent },
 /*Add New Route Here*/
 ];
 @NgModule({
