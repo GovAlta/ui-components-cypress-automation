@@ -2,7 +2,7 @@
   <h2>
     Container One
   </h2>
-  <goa-dropdown value="" id="container-dropdown">
+  <goa-dropdown value="" id="container-dropdown" name="container-dropdown">
     <goa-dropdown-item value="red" label="Red"></goa-dropdown-item>
     <goa-dropdown-item value="green" label="Green"></goa-dropdown-item>
     <goa-dropdown-item value="blue" label="Blue"></goa-dropdown-item>
@@ -19,7 +19,7 @@
   <h2>
     Accordion One
   </h2>
-  <goa-dropdown value="" id="accordion-dropdown">
+  <goa-dropdown value="" id="accordion-dropdown" name="accordion-dropdown">
     <goa-dropdown-item value="red" label="Red"></goa-dropdown-item>
     <goa-dropdown-item value="green" label="Green"></goa-dropdown-item>
     <goa-dropdown-item value="blue" label="Blue"></goa-dropdown-item>
@@ -34,7 +34,7 @@
   <h2>
     callout One
   </h2>
-  <goa-dropdown value="" id="callout-dropdown">
+  <goa-dropdown value="" id="callout-dropdown"  name="callout-dropdown">
     <goa-dropdown-item value="red" label="Red"></goa-dropdown-item>
     <goa-dropdown-item value="green" label="Green"></goa-dropdown-item>
     <goa-dropdown-item value="blue" label="Blue"></goa-dropdown-item>
@@ -49,7 +49,7 @@
   <h2>
     details One
   </h2>
-  <goa-dropdown value="" id="details-dropdown">
+  <goa-dropdown value="" id="details-dropdown" name="details-dropdown">
     <goa-dropdown-item value="red" label="Red"></goa-dropdown-item>
     <goa-dropdown-item value="green" label="Green"></goa-dropdown-item>
     <goa-dropdown-item value="blue" label="Blue"></goa-dropdown-item>
@@ -64,7 +64,7 @@
   <h2>
     hero banner One
   </h2>
-  <goa-dropdown value="" id="hero-banner-dropdown">
+  <goa-dropdown value="" id="hero-banner-dropdown" name="hero-banner-dropdown">
     <goa-dropdown-item value="red" label="Red"></goa-dropdown-item>
     <goa-dropdown-item value="green" label="Green"></goa-dropdown-item>
     <goa-dropdown-item value="blue" label="Blue"></goa-dropdown-item>
@@ -76,14 +76,14 @@
 
 </goa-hero-banner>
 
-<goa-button (_click)="onClick($event)">
+<goa-button (_click)="onClick($event)"  id="modal-button" testid="modal-button">
   Show Modal
 </goa-button>
 <goa-modal heading="Are you sure you want to exit your application?" role="alertdialog" [open]="open" closable>
   <h2>
     modal One
   </h2>
-  <goa-dropdown value="" id="modal-dropdown">
+  <goa-dropdown value="" id="modal-dropdown" name="modal-dropdown">
     <goa-dropdown-item value="red" label="Red"></goa-dropdown-item>
     <goa-dropdown-item value="green" label="Green"></goa-dropdown-item>
     <goa-dropdown-item value="blue" label="Blue"></goa-dropdown-item>

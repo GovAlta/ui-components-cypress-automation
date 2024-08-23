@@ -1,0 +1,9 @@
+<goa-form-item label="Basic dropdown">
+  <goa-dropdown native name="item" value="" (_change)="onChange($event)" id="dropdown-on-change">
+    <goa-dropdown-item value="red" label="Red"></goa-dropdown-item>
+    <goa-dropdown-item value="green" label="Green"></goa-dropdown-item>
+    <goa-dropdown-item value="blue" label="Blue"></goa-dropdown-item>
+  </goa-dropdown>
+</goa-form-item>
+
+<p id="on-change-initial-value">on change initial value is {{initialValue.toString()}}</p>

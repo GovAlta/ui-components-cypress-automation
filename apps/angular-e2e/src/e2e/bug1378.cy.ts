@@ -20,7 +20,10 @@ describe('Verify dropdown width', () => {
 
     cy.get('#form-control-initial-value').should('have.text', 'form control initial value is 3');
 
+  cy.wait(1000)
+  cy.get('#on-change-initial-value').should('have.text', 'on change initial value is 2');
 
+  cy.get('#form-control-initial-value').should('have.text', 'form control initial value is 3');
   });
 
 });
