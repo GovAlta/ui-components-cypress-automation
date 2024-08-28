@@ -74,7 +74,7 @@ const Bug1142PageComponent: React.FC = () => {
               <GoADropdownItem value="opt4" label="Option 4"></GoADropdownItem>
             </GoADropdown>
           </GoAFormItem>
-          <GoAButton testId="dropdown-empty-native-reset-button-shadow" id="dropdown-empty-native-reset-button">Reset</GoAButton>
+          <GoAButton testId="dropdown-empty-native-reset-button-shadow" id="dropdown-empty-native-reset-button"   onClick={resetFormControlEmptyNative}>Reset</GoAButton>
         </GoAGrid>
       </GoAContainer>
 

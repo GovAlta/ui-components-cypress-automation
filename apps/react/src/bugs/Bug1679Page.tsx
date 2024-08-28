@@ -4,6 +4,8 @@ import { GoAIconButton } from "@abgov/react-components";
 export default function Bug1679Page(props) {
   return (
     <>
+    <p id="text">Page Did Load</p>
+
     </>
   )
 }

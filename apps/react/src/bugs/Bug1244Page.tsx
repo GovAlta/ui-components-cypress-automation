@@ -5,7 +5,7 @@ export default function Bug1244Page(props) {
   return (
     <>
     <GoAFormItem label="Basic dropdown">
-      <GoADropdown name="item" value="" native={true}>
+      <GoADropdown name="item" value="" native={true} id="dropdown-target">
         <GoADropdownItem value="red" label="Red"></GoADropdownItem>
         <GoADropdownItem value="green" label="Green"></GoADropdownItem>
         <GoADropdownItem value="blue" label="Blue"></GoADropdownItem>

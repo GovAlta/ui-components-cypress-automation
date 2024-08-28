@@ -1,0 +1,15 @@
+<goa-container>
+
+<goa-dropdown goaValue name="selectMonth" [formControl]="monthCtrl" id="monthCtrl">
+  <goa-dropdown-item
+    *ngFor="let month of months"
+    [value]="month.number"
+    [label]="month.name"
+
+  >
+  </goa-dropdown-item>
+</goa-dropdown>
+
+<p id="dropdown-item-value">The dropdown-item-value is {{ monthCtrl.value}}</p>
+
+</goa-container>

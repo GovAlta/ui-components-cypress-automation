@@ -5,14 +5,13 @@
 
 <goa-container>
 
-
-  <goa-form-item label="Dropdown">
+  <goa-form-item label="Dropdown Native">
     <goa-dropdown
       goaValue
       native
-      [formControl]="formControl"
-      [value]="formControl.value"
-      id="dropdown"
+      [formControl]="formControlNative"
+      [value]="formControlNative.value"
+      id="dropdown-native"
     >
       <goa-dropdown-item
         *ngFor="let opt of options"
@@ -22,9 +21,30 @@
     </goa-dropdown>
   </goa-form-item>
 
+  <goa-form-item label="ropdown Non Native">
+    <goa-dropdown
+      goaValue
+      [formControl]="formControlNonNative"
+      [value]="formControlNonNative.value"
+      id="dropdown-non-native"
+      name='dropdown-non-native'
+    >
+      <goa-dropdown-item
+        *ngFor="let opt of options"
+        [value]="opt.value"
+        [label]="opt.label"
+      ></goa-dropdown-item>
+    </goa-dropdown>
+  </goa-form-item>
+
+  <goa-form-item label="Select">
+
+
   <select [formControl]="formControl" [value]="formControl.value" id="select">
     <option *ngFor="let opt of options" [value]="opt.value">
       {{ opt.label }}
     </option>
   </select>
+</goa-form-item>
+
 </goa-container>

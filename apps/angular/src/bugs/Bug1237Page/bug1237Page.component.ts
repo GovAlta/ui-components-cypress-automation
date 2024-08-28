@@ -15,12 +15,27 @@ export class Bug1237PageComponent {
   ];
 
   public formControl = new FormControl<string | null>(null);
+  public formControlNative = new FormControl<string | null>(null);
+  public formControlNonNative = new FormControl<string | null>(null);
+
 
   constructor() {}
 
   ngOnInit(): void {
     this.formControl.valueChanges.subscribe((value) => {
       console.log(`formControl Received value: ${value}`);
+      if (!value) {
+        return;
+      }
+    });
+    this.formControlNative.valueChanges.subscribe((value) => {
+      console.log(`formControlNative Received value: ${value}`);
+      if (!value) {
+        return;
+      }
+    });
+    this.formControlNonNative.valueChanges.subscribe((value) => {
+      console.log(`formControlNonNative Received value: ${value}`);
       if (!value) {
         return;
       }
