@@ -1,0 +1,21 @@
+<button id="button">focus anchor</button>
+<goa-form-item label="Tuition">
+  <goa-input  value="" name="tuition" leadingcontent="$" id="input">
+    <div slot="leadingContent">$</div>
+    <div slot="trailingContent">ABCD</div>
+  </goa-input>
+</goa-form-item>
+<hr />
+<goa-form-item label="disabled">
+  <goa-input  value="" name="disabled" leadingcontent="$" id="disabled" [disabled]=true>
+    <div slot="leadingContent">$</div>
+    <div slot="trailingContent">ABCD</div>
+  </goa-input>
+</goa-form-item>
+<hr />
+<goa-form-item label="error">
+  <goa-input  value="" name="error" leadingcontent="$" id="error" [error]=true>
+    <div slot="leadingContent">$</div>
+    <div slot="trailingContent">ABCD</div>
+  </goa-input>
+</goa-form-item>

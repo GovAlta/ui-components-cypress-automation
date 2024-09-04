@@ -1,0 +1,8 @@
+<goa-form-item label="value">
+  <goa-input type="date" width="20ch" name="item" [value]="value" (_change)="onChange($event)" id="input-string"></goa-input>
+</goa-form-item>
+<hr />
+<goa-form-item label="dateValue">
+  <goa-input type="date" width="20ch" name="item" [value]="dateValue" id="input-date"></goa-input>
+</goa-form-item>
+<p id="input-value">For Value for input is {{ value }}</p>

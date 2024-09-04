@@ -1,0 +1,38 @@
+<goa-block gap="xl" direction="column">
+  <goa-form-item label="Street Address">
+    <goa-input name="full" type="text" value="" (_change)="onChange($event)" width="100%"></goa-input>
+  </goa-form-item>
+  <goa-form-item label="Suite or unit #">
+    <goa-input name="half" type="text" value="" (_change)="onChange($event)" width="50%"></goa-input>
+  </goa-form-item>
+  <goa-form-item label="City/town">
+    <goa-input name="fix" type="text" value="" (_change)="onChange($event)" width="260px"></goa-input>
+  </goa-form-item>
+  <goa-block direction="row">
+    <goa-form-item label="Provice/territory">
+      <goa-dropdown (_change)="onChange($event)" name="province" value="alberta">
+        <goa-dropdown-item label="Alberta" value="alberta"></goa-dropdown-item>
+        <goa-dropdown-item label="BC" value="bc"></goa-dropdown-item>
+        <goa-dropdown-item label="Manitoba" value="manitoba"></goa-dropdown-item>
+        <goa-dropdown-item label="New Brunswick" value="new-brunswick"></goa-dropdown-item>
+        <goa-dropdown-item label="Newfoundland and Labrador" value="newfoundland"></goa-dropdown-item>
+        <goa-dropdown-item label="Nova Scotia" value="nova-scotia"></goa-dropdown-item>
+        <goa-dropdown-item label="Ontario" value="ontario"></goa-dropdown-item>
+        <goa-dropdown-item label="Prince Edward Island" value="prince-edward-island"></goa-dropdown-item>
+        <goa-dropdown-item label="Quebec" value="quebec"></goa-dropdown-item>
+        <goa-dropdown-item label="Saskatchewan" value="saskatchewan"></goa-dropdown-item>
+      </goa-dropdown>
+    </goa-form-item>
+    <goa-form-item label="Postal Code">
+      <goa-input name="postalCode" type="text" value="" (_change)="onChange($event)" width="100%"></goa-input>
+    </goa-form-item>
+  </goa-block>
+</goa-block>
+<goa-button-group alignment="start" mt="2xl">
+  <goa-button type="primary" (_click)="onClick($event)">
+    Submit and continue
+  </goa-button>
+  <goa-button type="secondary" (_click)="onClick($event)">
+    Cancel
+  </goa-button>
+</goa-button-group>
