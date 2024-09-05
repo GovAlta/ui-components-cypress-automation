@@ -67,7 +67,7 @@ export default function Bug1258Page() {
           Reset
         </GoAButton>
         <p id="dropdown-native-value">
-          Value for dropdown-native-value is {formControlNative}
+          For Value for dropdown-native-value is {formControlNative}
         </p>
       </GoAContainer>
 
@@ -95,7 +95,7 @@ export default function Bug1258Page() {
           Reset
         </GoAButton>
         <p id="dropdown-non-native-value">
-          Value for dropdown-non-native-value is {formControlNonNative}
+          For Value for dropdown-non-native-value is {formControlNonNative}
         </p>
       </GoAContainer>
     </>

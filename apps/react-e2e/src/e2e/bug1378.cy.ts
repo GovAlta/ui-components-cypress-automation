@@ -1,12 +1,11 @@
 import 'cypress-shadow-dom';
 
-describe('Verify dropdown width', () => {
+describe('Initial change event on Dropdown', () => {
 
 
 
-    // Visit the page
 
-  it('onChange should not be fire on initial page load', () => {
+    it('should verify that onChange is not triggered on initial page load', () => {
 
 
 
