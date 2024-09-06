@@ -28,10 +28,10 @@ describe('Incorrect border rendering on Text Field in Error and Focus states (Bu
 
     // Verify the box-shadow when the input is focused
     cy.get('#input').shadow().find('input').should('have.css', 'box-shadow', 'rgb(254, 186, 53) 0px 0px 0px 3px');
+    cy.log('This test is failed intentionally, a new bug is reported: https://github.com/GovAlta/ui-components/issues/2089');
     cy.get('#input').shadow().find('.goa-input').should('have.css', 'box-shadow', 'none');
     cy.get('#input').shadow().find('.leading-content-slot').should('have.css', 'box-shadow', 'none');
     cy.get('#input').shadow().find('.trailing-content-slot').should('have.css', 'box-shadow', 'none');
-    cy.log('This test is failed intentionally, a new bug is reported: https://github.com/GovAlta/ui-components/issues/2089');
 
   });
 

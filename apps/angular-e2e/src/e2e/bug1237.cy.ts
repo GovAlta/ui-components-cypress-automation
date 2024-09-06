@@ -36,9 +36,8 @@ describe('Keyboard behaviour on dropdown 1237', () => {
       cy.realPress("ArrowDown");
       cy.realPress("ArrowDown");
       cy.realPress("Space");
-      cy.get('#dropdown-non-native').shadow().find('input').should('have.value', '');
-      cy.get('#dropdown-non-native').shadow().find('goa-popover').find('ul#menu-dropdown-non-native').should('be.visible');
-      cy.log('This test is failed intentionally, a new bug is reported: https://github.com/GovAlta/ui-components/issues/2106');
+      cy.get('#dropdown-non-native').shadow().find('input').should('have.value', 'Option 3');
+      cy.get('#dropdown-non-native').shadow().find('goa-popover').find('ul#menu-dropdown-non-native').should('not.be.visible');
 
   });
 

@@ -33,10 +33,10 @@ describe('width not respecting parent container', () => {
 it('Block: 100% width of inputs not working - view point iphone 14 Pro Max', () => {
       cy.viewport(430, 932)
   cy.visit('/bug1698')
+  cy.log('This test is failed intentionally, a new bug is reported: https://github.com/GovAlta/ui-components/issues/2107');
   cy.get('#dropdown-full').shadow().find('goa-popover').invoke('width').should('equal', 308);
   cy.get('#dropdown-half').shadow().find('goa-popover').invoke('width').should('equal', 150);
   cy.get('#dropdown-quarter').shadow().find('goa-popover').invoke('width').should('equal', 75);
-  cy.log('This test is failed intentionally, a new bug is reported: https://github.com/GovAlta/ui-components/issues/2107');
 });
 
 });

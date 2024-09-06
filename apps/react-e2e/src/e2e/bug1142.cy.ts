@@ -36,9 +36,9 @@ describe('Cannot set a value of "" on goa-dropdown', () => {
       cy.get('#dropdown-null-native').shadow().find('select').should('have.value', 'opt1');
       cy.wait(1000)
       cy.get('[testid="dropdown-null-native-reset-button-shadow"]').shadow().find('button').click({ force: true });
+      cy.log('This test is failed intentionally, a new bug is reported: https://github.com/GovAlta/ui-components/issues/2105');
       cy.get('#dropdown-null-native').shadow().find('select').should('have.value', '');
       cy.wait(1000)
-      cy.log('This test is failed intentionally, a new bug is reported: https://github.com/GovAlta/ui-components/issues/2105');
     });
 
     it('Dropdown without native properties without an option of "" should reset to "" after clicking reset', () => {

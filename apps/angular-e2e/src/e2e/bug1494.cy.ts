@@ -34,10 +34,10 @@ describe('Dropdown inside Tab key bindings', () => {
     cy.realPress("ArrowDown"); // Navigate through the filtered options
     cy.realPress("ArrowDown"); // Select the desired option
     cy.realPress("Enter"); // Confirm selection
+    cy.log('This test is failed intentionally, a new bug is reported: https://github.com/GovAlta/ui-components/issues/1986');
     cy.get('#dropdown-two').shadow().find('input').should('have.value', 'Black'); // Verify the selected value
 
     // Log a note that the test is intentionally failed due to a reported bug
-    cy.log('This test is failed intentionally, a new bug is reported: https://github.com/GovAlta/ui-components/issues/1986');
   });
 
 });

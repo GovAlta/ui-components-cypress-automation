@@ -24,6 +24,7 @@ describe('Block: 100% width of inputs not working #1867', () => {
 
     // Visit the test page
     cy.visit('/bug1867');
+    cy.log('This test is failed intentionally, a new bug is reported: https://github.com/GovAlta/ui-components/issues/2107');
     cy.wait(100);
 
     // Verify the full-width input has a width of 428px
@@ -34,7 +35,6 @@ describe('Block: 100% width of inputs not working #1867', () => {
 
     // Verify the fixed-width input has a width of 258px
     cy.get('goa-input[name="fix"]').shadow().find('input').invoke('outerWidth').should('equal', 258);
-    cy.log('This test is failed intentionally, a new bug is reported: https://github.com/GovAlta/ui-components/issues/2107');
 
   });
 
