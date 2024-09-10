@@ -1,9 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { GoAIconButton } from "@abgov/react-components";
+import { GoAInput, GoAFormItem } from "@abgov/react-components";
 
 export default function Bug1308Page(props) {
+
+
   return (
-    <>
-    </>
-  )
+    <div>
+      <GoAFormItem label="Tuition">
+        <GoAInput
+          value={value}
+          name="tuition"
+          leadingContent="$"
+          trailingContent="ABCDE"
+          id="input"
+        >
+        </GoAInput>
+      </GoAFormItem>
+    </div>
+  );
 }

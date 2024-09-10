@@ -1,9 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { GoAIconButton } from "@abgov/react-components";
+import { GoAInput, GoATextarea, GoAFormItem } from "@abgov/react-components";
 
 export default function Bug1276Page(props) {
   return (
-    <>
-    </>
+    <div>
+      {/* Input Field */}
+      <GoAFormItem label="Input">
+        <GoAInput
+          name="input"
+          width="20ch"
+          value={inputValue}
+        />
+      </GoAFormItem>
+
+      {/* Textarea Field */}
+      <GoAFormItem label="Textarea">
+        <GoATextarea
+          name="textarea"
+          width="60ch"
+          value={textareaValue}
+        />
+      </GoAFormItem>
+    </div>
   )
 }

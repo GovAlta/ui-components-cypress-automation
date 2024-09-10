@@ -1,0 +1,9 @@
+<goa-form-item label="Input" requirement="required" labelsize="regular">
+  <goa-input width="20ch" name="item" [value]="value" (_change)="onChange($event)" (_keyPress)="onKeyPress($event)"></goa-input>
+</goa-form-item>
+
+<goa-form-item label="TextArea">
+  <goa-textarea name="textArea" [value]="value" (_change)="onChange($event)" width="60ch" (_keyPress)="onKeyPress($event)"></goa-textarea>
+</goa-form-item>
+
+<p id='text'>Verification text is {{text}}</p>

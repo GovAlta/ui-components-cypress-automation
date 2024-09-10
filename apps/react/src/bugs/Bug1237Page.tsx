@@ -65,7 +65,6 @@ export default function Bug1237Page(props) {
         <GoADropdown
           value={formControlNonNative}
           onChange={onChangelNonNative}
-          id="dropdown-native"
           id="dropdown-non-native"
           name='dropdown-non-native'
         >
