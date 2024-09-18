@@ -9,7 +9,9 @@ const rl = readline.createInterface({
 
 rl.question('Enter the bug number (XXXX): ', (bugNumber) => {
   createAngularFiles(bugNumber);
-  createReactFile(bugNumber);
+  createReactFiles(bugNumber);
+  createAngularTestFile(bugNumber);
+  createReactTestFile(bugNumber);
   updateAngularRoutingModule(bugNumber);
   updateAngularAppModule(bugNumber);
   updateAppComponentHtml(bugNumber);
@@ -48,7 +50,7 @@ export class Bug${bugNumber}PageComponent {
   console.log(`Angular folder and files created successfully at ${folderPath}`);
 }
 
-function createReactFile(bugNumber) {
+function createReactFiles(bugNumber) {
   const folderPath = path.join('apps', 'react', 'src', 'bugs');
 
   if (!fs.existsSync(folderPath)) {
@@ -72,6 +74,48 @@ export default function Bug${bugNumber}Page(props) {
   fs.writeFileSync(tsxFilePath, tsFileContent.trim());
 
   console.log(`React file created successfully at ${tsxFilePath}`);
+}
+
+function createAngularTestFile(bugNumber) {
+  const fileName = `bug${bugNumber}.cy.ts`;
+  const folderPath = path.join('apps', 'angular-e2e','src', 'e2e');
+
+  if (!fs.existsSync(folderPath)) {
+    fs.mkdirSync(folderPath, { recursive: true });
+  }
+
+  const filePath = path.join(folderPath, fileName);
+
+  const fileContent = `
+import 'cypress-shadow-dom';
+
+describe('Enter test description here', () => {
+});`;
+
+  fs.writeFileSync(filePath, fileContent.trim());
+
+  console.log(`Angular test file successfully created at ${filePath}`);
+}
+
+function createReactTestFile(bugNumber) {
+  const fileName = `bug${bugNumber}.cy.ts`
+  const folderPath = path.join('apps', 'react-e2e', 'src', 'e2e');
+
+  if (!fs.existsSync(folderPath)) {
+    fs.mkdirSync(folderPath, { recursive: true });
+  }
+
+  const filePath = path.join(folderPath, fileName);
+
+  const fileContent = `
+import 'cypress-shadow-dom';
+
+describe('Enter test description here', () => {
+});`;
+
+  fs.writeFileSync(filePath, fileContent.trim());
+
+  console.log(`React test file created successfully at ${filePath}`);
 }
 
 function updateAngularRoutingModule(bugNumber) {
