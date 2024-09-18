@@ -8,7 +8,7 @@
 <goa-container><goa-grid>
 
 
-  <goa-form-item label="Dropdown Native With Empty String Value">
+  <goa-form-item label="Dropdown Native">
     <goa-dropdown
       goaValue
       native
@@ -24,12 +24,12 @@
     </goa-dropdown>
   </goa-form-item>
   <goa-button testid="dropdown-native-reset-button-shadow" id="dropdown-native-reset-button" (_click)="formControlNativeReset()">Reset</goa-button>
-  <p id="dropdown-native-value">For Value for dropdown-native-value is    {{ formControlNativeValue }}</p>
+  <p id="dropdown-native-value">For Value for dropdown-native-value is {{ formControlNativeValue }}</p>
 </goa-grid></goa-container>
 
 <goa-container><goa-grid>
 
-  <goa-form-item label="Dropdown Not Native With Empty String Value">
+  <goa-form-item label="Dropdown Not Native">
     <goa-dropdown
       goaValue
       [formControl]="formControlNonNative"
@@ -44,6 +44,6 @@
     </goa-dropdown>
   </goa-form-item>
   <goa-button testid="dropdown-non-native-reset-button-shadow" id="dropdown-non-native-reset-button" (_click)="formControlNonNativeReset()">Reset</goa-button>
-  <p id="dropdown-non-native-value">For Value for dropdown-non-native-value is    {{ formControlNonNativeValue }}</p>
+  <p id="dropdown-non-native-value">For Value for dropdown-non-native-value is {{ formControlNonNativeValue }}</p>
 
 </goa-grid></goa-container>

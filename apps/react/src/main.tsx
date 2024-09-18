@@ -24,6 +24,15 @@ import Bug1960Page from "./bugs/Bug1960Page";
 import Bug1266Page from "./bugs/Bug1266Page";
 import Bug1494Page from "./bugs/Bug1494Page";
 import Bug2044Page from "./bugs/Bug2044Page";
+import Bug1867Page from "./bugs/Bug1867Page";
+import Bug1796Page from "./bugs/Bug1796Page";
+import Bug1598Page from "./bugs/Bug1598Page";
+import Bug1577Page from "./bugs/Bug1577Page";
+import Bug1532Page from "./bugs/Bug1532Page";
+import Bug1453Page from "./bugs/Bug1453Page";
+import Bug1380Page from "./bugs/Bug1380Page";
+import Bug1308Page from "./bugs/Bug1308Page";
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -52,6 +61,14 @@ root.render(
 <Route path="/bug1266" element={<Bug1266Page />}></Route>
 <Route path="/bug1494" element={<Bug1494Page />}></Route>
 <Route path="/bug2044" element={<Bug2044Page />}></Route>
+<Route path="/bug1867" element={<Bug1867Page />}></Route>
+<Route path="/bug1796" element={<Bug1796Page />}></Route>
+<Route path="/bug1598" element={<Bug1598Page />}></Route>
+<Route path="/bug1577" element={<Bug1577Page />}></Route>
+<Route path="/bug1532" element={<Bug1532Page />}></Route>
+<Route path="/bug1453" element={<Bug1453Page />}></Route>
+<Route path="/bug1380" element={<Bug1380Page />}></Route>
+<Route path="/bug1308" element={<Bug1308Page />}></Route>
 {/** Add more routes here */}
 
         </Routes>

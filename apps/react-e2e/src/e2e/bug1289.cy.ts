@@ -1,28 +1,29 @@
 import 'cypress-shadow-dom';
 
-describe('Verify dropdown relative tag true and false', () => {
+describe('Dropdown Items block is detached from the actual Dropdown', () => {
 
+  it('Dropdown options should render correctly when parent is absolutely positioned and relative is set to true', () => {
 
-  it('When dropdown parent is absolute positioned, and dropdown have relative set to true, the dropdown option will not render far from the dropdown', () => {
+    // Navigate to the test page
+    cy.visit('/bug1289');
 
-    // Visit the page
-    cy.visit('/bug1289')
-    // Assert that the page has loaded by checking a visible element
+    // Check that the page has loaded by capturing the window height
     cy.window().then((win) => {
       return win.innerHeight;
     }).as('windowHeight');
 
+    // When the dropdown is positioned at the bottom of the window as absolute
     cy.get('@windowHeight').then((height) => {
-        console.log(height)
-      cy.get('#dropdown').shadow().find('input').click();
-        cy.get('#dropdown').shadow().find('goa-popover').find('li#opt1').then($el => {
-          const rect = $el[0].getBoundingClientRect();
-          // Verify the top position
+      cy.get('#dropdown').shadow().find('input').click(); // Open the dropdown
 
-          expect(rect.y).to.be.lessThan(height);
-        });
-          // Verify the left position
+      // Check the position of the first dropdown option
+      cy.get('#dropdown').shadow().find('goa-popover').find('li#opt1').then(($el) => {
+        const rect = $el[0].getBoundingClientRect(); // Get the popover's bounding rectangle
+
+        // Verify the top position is within the window height
+        expect(rect.y).to.be.lessThan(height);
 
       });
     });
+  });
 });

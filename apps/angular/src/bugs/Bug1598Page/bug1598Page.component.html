@@ -1,0 +1,11 @@
+<goa-form-item [formGroup]="formGroup">
+  <goa-input goaValue
+   placeholder="Search requester"
+   formControlName="txtRequesterName"
+   trailingicon="close"
+   [handletrailingiconclick]="true"
+   (_trailingIconClick)="searchRequesterClickIcon()"
+    id="input"
+   width="434px">
+  </goa-input>
+</goa-form-item>

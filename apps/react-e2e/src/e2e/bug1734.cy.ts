@@ -1,29 +1,35 @@
 import 'cypress-shadow-dom';
 
-describe('When dropdonw is at bottom of the screen, popover will display on top', () => {
+describe('Dropdown popover does not display correctly above the input at the screen edge', () => {
 
+  it('should verify that the dropdown popover displays above the input when at the edge of the screen', () => {
 
-  it('When dropdonw is at bottom of the screen, popover will display on top', () => {
+    // Visit the test page
+    cy.visit('/bug1734');
 
-    // Visit the page
-    cy.visit('/bug1734')
-    // Assert that the page has loaded by checking a visible element
+    // Capture the window height
     cy.window().then((win) => {
       return win.innerHeight;
     }).as('windowHeight');
 
     cy.get('@windowHeight').then((height) => {
-        console.log(height)
+
+      // Click to open the dropdown
       cy.get('#dropdown').shadow().find('input').click();
-        cy.get('#dropdown').shadow().find('goa-popover').find('li#red').then($el => {
-          const rect = $el[0].getBoundingClientRect();
-          // Verify the top position
-          const expectedY = height - 190;
 
-          expect(rect.y).to.equal(expectedY);
-        });
-          // Verify the left position
+      // Get the position of the dropdown popover item (li#red)
+      cy.get('#dropdown').shadow().find('goa-popover').find('li#red').then(($el) => {
+        const rect = $el[0].getBoundingClientRect();
 
+        // Calculate the expected top position for the popover
+        const expectedY = height - 190;
+
+        // Verify that the top position matches the expected position
+        expect(rect.y).to.equal(expectedY);
       });
+
+
     });
+  });
+
 });
