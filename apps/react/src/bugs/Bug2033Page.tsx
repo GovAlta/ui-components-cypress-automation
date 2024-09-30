@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 
 import { GoAFormStepper, GoAFormStep, GoAFormStepStatusType, GoAPages, GoAButton } from "@abgov/react-components";
 
-export default function Bug2033Page(props) {
-
-
+export default function Bug2033Page() {
+  const [step, setStep] = useState(-1);
+  const [status, setStatus] = useState<GoAFormStepStatusType[]>([
+    "incomplete", "incomplete", "incomplete", "incomplete"
+  ]);
 
   return (
     <>
