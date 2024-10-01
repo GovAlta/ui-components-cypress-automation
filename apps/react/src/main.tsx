@@ -2,6 +2,8 @@ import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+import "@abgov/web-components";
+
 import App from './app/app';
 
 import Bug1142Page from "./bugs/Bug1142Page";

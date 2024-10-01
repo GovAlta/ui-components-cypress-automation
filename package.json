@@ -15,9 +15,9 @@
   },
   "private": true,
   "dependencies": {
-    "@abgov/angular-components": "3.0.3",
-    "@abgov/react-components": "4.23.0",
-    "@abgov/web-components": "1.24.0",
+    "@abgov/angular-components": "3.2.0",
+    "@abgov/react-components": "5.2.0",
+    "@abgov/web-components": "1.27.0",
     "@angular/animations": "~18.1.0",
     "@angular/common": "~18.1.0",
     "@angular/compiler": "~18.1.0",
