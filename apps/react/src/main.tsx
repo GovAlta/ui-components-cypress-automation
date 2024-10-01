@@ -2,6 +2,8 @@ import { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+import "@abgov/web-components";
+
 import App from './app/app';
 
 import Bug1142Page from "./bugs/Bug1142Page";
@@ -37,6 +39,10 @@ import Bug1149Page from "./bugs/Bug1149Page";
 import Bug976Page from "./bugs/Bug976Page";
 import Bug1499Page from "./bugs/Bug1499Page";
 import Bug1703Page from "./bugs/Bug1703Page";
+import Bug2111Page from "./bugs/Bug2111Page";
+import Bug2000Page from "./bugs/Bug2000Page";
+import Bug2056Page from "./bugs/Bug2056Page";
+import Bug2044Page from "./bugs/Bug2044Page";
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -78,6 +84,10 @@ root.render(
 <Route path="/bug976" element={<Bug976Page />}></Route>
 <Route path="/bug1499" element={<Bug1499Page />}></Route>
 <Route path="/bug1703" element={<Bug1703Page />}></Route>
+<Route path="/bug2111" element={<Bug2111Page />}></Route>
+<Route path="/bug2000" element={<Bug2000Page />}></Route>
+<Route path="/bug2056" element={<Bug2056Page />}></Route>
+<Route path="/bug2044" element={<Bug2044Page />}></Route>
 {/** Add more routes here */}
 
         </Routes>
