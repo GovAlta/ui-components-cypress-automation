@@ -23,6 +23,7 @@ import { Bug1758PageComponent } from "apps/angular/src/bugs/Bug1758Page/bug1758P
 import { Bug1960PageComponent } from "apps/angular/src/bugs/Bug1960Page/bug1960Page.component";
 import { Bug1266PageComponent } from "apps/angular/src/bugs/Bug1266Page/bug1266Page.component";
 import { Bug1494PageComponent } from "apps/angular/src/bugs/Bug1494Page/bug1494Page.component";
+import { Bug2044PageComponent } from "apps/angular/src/bugs/Bug2044Page/bug2044Page.component";
 import { Bug1867PageComponent } from "apps/angular/src/bugs/Bug1867Page/bug1867Page.component";
 import { Bug1796PageComponent } from "apps/angular/src/bugs/Bug1796Page/bug1796Page.component";
 import { Bug1598PageComponent } from "apps/angular/src/bugs/Bug1598Page/bug1598Page.component";
@@ -65,6 +66,7 @@ export const appRoutes: Route[] = [
 { path: "bug1960", component: Bug1960PageComponent },
 { path: "bug1266", component: Bug1266PageComponent },
 { path: "bug1494", component: Bug1494PageComponent },
+{ path: "bug2044", component: Bug2044PageComponent },
 { path: "bug1867", component: Bug1867PageComponent },
 { path: "bug1796", component: Bug1796PageComponent },
 { path: "bug1598", component: Bug1598PageComponent },
