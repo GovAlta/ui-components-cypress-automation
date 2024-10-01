@@ -3,9 +3,11 @@ import 'cypress-shadow-dom';
 describe('Dropdown Items block is detached from the actual Dropdown', () => {
 
   it('Dropdown options should render correctly when parent is absolutely positioned and relative is set to true', () => {
+    cy.viewport(1000, 660);
 
     // Navigate to the test page
     cy.visit('/bug1289');
+    cy.wait(1000);
 
     // Check that the page has loaded by capturing the window height
     cy.window().then((win) => {

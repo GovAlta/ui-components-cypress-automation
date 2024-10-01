@@ -5,8 +5,11 @@ describe('Dropdown popover does not display correctly above the input at the scr
   it('should verify that the dropdown popover displays above the input when at the edge of the screen', () => {
 
     // Visit the test page
-    cy.visit('/bug1734');
+    cy.viewport(1000, 660);
 
+    // Navigate to the test page
+    cy.visit('/bug1734');
+    cy.wait(1000);
     // Capture the window height
     cy.window().then((win) => {
       return win.innerHeight;
