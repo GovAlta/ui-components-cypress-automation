@@ -1,0 +1,14 @@
+<goa-button-group alignment="center" mb="xl">
+  <goa-button (_click)="enableDatePicker()">Enable</goa-button>
+  <goa-button (_click)="disableDatePicker()">Disable</goa-button>
+</goa-button-group>
+
+<h4>Angular form control</h4>
+<goa-date-picker goaValue [formControl]="reactiveDate2FormCtrl"></goa-date-picker>
+
+<h4>Event:</h4>
+<goa-date-picker
+  goaValue
+  [formControl]="reactiveDate2FormCtrl"
+  [attr.disabled]="disabled"
+></goa-date-picker>

@@ -1,0 +1,6 @@
+<goa-form-item label="Input Label" helptext="This is a helper message" mb="3xl">
+  <goa-date-picker [formControl]="dateCtrl" [value]="dateCtrl.value" />
+</goa-form-item>
+<br />
+<goa-button (_click)="setValue()" mr="l">Set Value</goa-button>
+<goa-button (_click)="clearValue()">Clear Value</goa-button>
