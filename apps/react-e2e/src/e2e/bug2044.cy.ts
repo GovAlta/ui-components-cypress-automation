@@ -1,8 +1,7 @@
 import 'cypress-shadow-dom';
 
 describe('Feature 2044 Testing', () => {
-  /*
-  This Feature has not been pushed
+/*
     it('datepicker is disabled', () => {
         cy.visit('/bug2044');
         cy.wait(1000);

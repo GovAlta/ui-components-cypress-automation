@@ -15,6 +15,7 @@ describe('Cannot set a value of "" on goa-dropdown', () => {
 
   });
 
+
   it('Dropdown without native properties and an option of "" should reset', () => {
     cy.visit('/bug1142')
 

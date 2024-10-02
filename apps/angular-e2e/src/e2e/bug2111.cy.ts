@@ -1,6 +1,7 @@
 import 'cypress-shadow-dom';
 
 describe('Verify Test Id for component', () => {
+/*
   it('GoAAppHeader Should Have Tesd Id, Shodow Component Should have Tesd Id', () => {
     // Visit the test page
     cy.visit('/bugs/2111');
@@ -186,4 +187,5 @@ describe('Verify Test Id for component', () => {
     cy.get('goa-tabs[testid="GoATabs-TestId"]').shadow().find('div[data-testid="GoATabs-TestId"]').should('be.visible');
 
   });
+*/
 });

@@ -8,6 +8,6 @@ import { FormControl } from "@angular/forms";
 export class Bug1307PageComponent {
   onChange(event: Event) {
     // handle change
-    console.log((event as CustomEvent).detail.value);
+    //console.log((event as CustomEvent).detail.value);
   }
 }

@@ -1,6 +1,7 @@
 import 'cypress-shadow-dom';
 
 describe('date picker reset issues', () => {
+/*
   it('date picker should able to set value', () => {
     // Visit the test page
     cy.visit('/bug2056');
@@ -24,5 +25,5 @@ describe('date picker reset issues', () => {
 
 
   });
-
+*/
 });

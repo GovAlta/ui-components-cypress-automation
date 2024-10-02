@@ -10,6 +10,7 @@ describe('Dropdown: Width does not match when specifying width in the component'
     cy.visit('/bug1702');
 
     // Verify the width of the full-width dropdown and its popover
+    // Verify the width of the full-width dropdown and its popover
     cy.get('#dropdown-full').shadow().find('goa-popover').invoke('width').should('equal', 1158);
     cy.get('#dropdown-full').shadow().find('input').click({ force: true });
     cy.get('#dropdown-full').shadow().find('#menu-item').invoke('width').should('equal', 1158);
