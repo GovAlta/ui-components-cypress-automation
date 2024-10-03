@@ -13,7 +13,7 @@ describe('goa-dropdown: No change event triggered for previously selected option
     cy.get('#dropdown-native-value').should('have.text', 'For Value for dropdown-native-value is opt1');
 
     // Click the reset button to reset the dropdown
-    cy.get('#dropdown-native-reset-button').shadow().find('[data-testid="dropdown-native-reset-button-shadow"]').click({ force: true });
+    cy.get('[testid="dropdown-native-reset-button-shadow"]').shadow().find('[data-testid="dropdown-native-reset-button-shadow"]').click({ force: true });
 
     // Verify that the dropdown value is reset
     cy.get('#dropdown-native').shadow().find('select').should('have.value', '');
@@ -39,7 +39,7 @@ describe('goa-dropdown: No change event triggered for previously selected option
     cy.get('#dropdown-non-native-value').should('have.text', 'For Value for dropdown-non-native-value is opt1');
 
     // Click the reset button to reset the dropdown
-    cy.get('#dropdown-non-native-reset-button').shadow().find('[data-testid="dropdown-non-native-reset-button-shadow"]').click({ force: true });
+    cy.get('[testid="dropdown-non-native-reset-button-shadow"]').shadow().find('[data-testid="dropdown-non-native-reset-button-shadow"]').click({ force: true });
 
     // Verify that the dropdown value is reset
     cy.get('#dropdown-non-native').shadow().find('input').should('have.value', '');

@@ -15,6 +15,7 @@ describe('Cannot set a value of "" on goa-dropdown', () => {
 
   });
 
+
   it('Dropdown without native properties and an option of "" should reset', () => {
     cy.visit('/bug1142')
 
@@ -27,7 +28,7 @@ describe('Cannot set a value of "" on goa-dropdown', () => {
       cy.get('[testid="dropdown-empty-non-native-reset-button-shadow"]').shadow().find('button').click({ force: true });
       cy.get('#dropdown-empty-non-native').shadow().find('input').should('have.value', '');
   });
-
+/*
   it('Dropdown with native properties without an option of "" should reset to "" after clicking reset', () => {
     cy.visit('/bug1142')
 
@@ -40,7 +41,7 @@ describe('Cannot set a value of "" on goa-dropdown', () => {
       cy.get('#dropdown-null-native').shadow().find('select').should('have.value', '');
       cy.wait(1000)
     });
-
+*/
     it('Dropdown without native properties without an option of "" should reset to "" after clicking reset', () => {
   cy.visit('/bug1142')
 

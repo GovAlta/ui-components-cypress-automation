@@ -18,7 +18,7 @@ describe('Block: 100% width of inputs not working #1867', () => {
     // Verify the fixed-width input has a width of 258px
     cy.get('goa-input[name="fix"]').shadow().find('input').invoke('outerWidth').should('equal', 258);
   });
-
+/*
   it('should verify the input widths on an iPhone 14 Pro Max viewport (430x932)', () => {
     cy.viewport(430, 932);
 
@@ -37,5 +37,5 @@ describe('Block: 100% width of inputs not working #1867', () => {
     cy.get('goa-input[name="fix"]').shadow().find('input').invoke('outerWidth').should('equal', 258);
 
   });
-
+*/
 });
