@@ -4,11 +4,11 @@ on:
   pull_request:
     branches:
       - master
-      - dev
+      - alpha
   push:
     branches:
       - master
-      - dev
+      - alpha
   workflow_dispatch:
 
 jobs:
