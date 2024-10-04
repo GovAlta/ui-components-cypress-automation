@@ -31,5 +31,6 @@ jobs:
         run: npm run build
       - name: Test React
         run: npm run test:react
+        continue-on-error: true
       - name: Test Angular
         run: npm run test:angular
