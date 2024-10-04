@@ -19,18 +19,11 @@ jobs:
       options: --user 1001
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Cypress Run
+        uses: cypress-io/github-action@v6
         with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v2
-        with:
-          node-version: "20"
-      - uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-      - run: npm ci
-      - name: Build
-        run: npm run build
-      - name: Test
-        run: npm run test
+          build: npm run build
+          start: npm run test
+          browser: chrome
