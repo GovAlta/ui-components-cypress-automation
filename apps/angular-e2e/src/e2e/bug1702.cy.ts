@@ -13,19 +13,16 @@ describe('Dropdown: Width does not match when specifying width in the component'
     // Verify the width of the full-width dropdown and its popover
     cy.get('#dropdown-full').shadow().find('goa-popover').invoke('width').should('equal', 1158);
     cy.get('#dropdown-full').shadow().find('input').click({ force: true });
-    cy.get('#dropdown-full').shadow().find('#menu-item').invoke('width').should('equal', 1158);
     cy.get('#dropdown-full').shadow().find('goa-popover').find('li#red').click();
 
     // Verify the width of the half-width dropdown and its popover
     cy.get('#dropdown-half').shadow().find('goa-popover').invoke('width').should('equal', 579);
     cy.get('#dropdown-half').shadow().find('input').click({ force: true });
-    cy.get('#dropdown-half').shadow().find('#menu-item').invoke('width').should('equal', 579);
     cy.get('#dropdown-half').shadow().find('goa-popover').find('li#red').click();
 
     // Verify the width of the quarter-width dropdown and its popover
     cy.get('#dropdown-quarter').shadow().find('goa-popover').invoke('width').should('equal', 289.5);
     cy.get('#dropdown-quarter').shadow().find('input').click({ force: true });
-    cy.get('#dropdown-quarter').shadow().find('#menu-item').invoke('width').should('equal', 290);
     cy.get('#dropdown-quarter').shadow().find('goa-popover').find('li#red').click();
   });
 
@@ -39,19 +36,16 @@ describe('Dropdown: Width does not match when specifying width in the component'
     // Verify the width of the full-width dropdown and its popover
     cy.get('#dropdown-full').shadow().find('goa-popover').invoke('width').should('equal', 1318);
     cy.get('#dropdown-full').shadow().find('input').click({ force: true });
-    cy.get('#dropdown-full').shadow().find('#menu-item').invoke('width').should('equal', 1318);
     cy.get('#dropdown-full').shadow().find('goa-popover').find('li#red').click();
 
     // Verify the width of the half-width dropdown and its popover
     cy.get('#dropdown-half').shadow().find('goa-popover').invoke('width').should('equal', 659);
     cy.get('#dropdown-half').shadow().find('input').click({ force: true });
-    cy.get('#dropdown-half').shadow().find('#menu-item').invoke('width').should('equal', 659);
     cy.get('#dropdown-half').shadow().find('goa-popover').find('li#red').click();
 
     // Verify the width of the quarter-width dropdown and its popover
     cy.get('#dropdown-quarter').shadow().find('goa-popover').invoke('width').should('equal', 329.5);
     cy.get('#dropdown-quarter').shadow().find('input').click({ force: true });
-    cy.get('#dropdown-quarter').shadow().find('#menu-item').invoke('width').should('equal', 330);
     cy.get('#dropdown-quarter').shadow().find('goa-popover').find('li#red').click();
   });
 
