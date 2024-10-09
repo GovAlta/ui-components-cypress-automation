@@ -51,7 +51,7 @@ describe('Dropdown popover should display on top of goa components', () => {
     cy.visit('/bug1758');
 
     // Open accordion and trigger dropdown popover
-    cy.get('#accordion').click();
+    cy.get('goa-accordion').click();
     cy.get('#accordion-dropdown').shadow().find('input').click();
 
     // Ensure list items in the dropdown are visible
@@ -112,7 +112,7 @@ describe('Dropdown popover should display on top of goa components', () => {
   it('should display dropdown on top of input in goa-details', () => {
     cy.viewport(1280, 720);
     cy.visit('/bug1758');
-    cy.get('#details').click();
+    cy.get('goa-details').click();
 
     // Trigger dropdown popover in goa-details
     cy.get('#details-dropdown').shadow().find('input').click();
@@ -177,7 +177,8 @@ describe('Dropdown popover should display on top of goa components', () => {
     cy.visit('/bug1758');
 
     // Trigger dropdown popover in goa-modal
-    cy.get('#modal-button').shadow().find('[data-testid="modal-button"]').click({ force: true });
+    cy.get('[testid="modal-button"]').shadow().find('[data-testid="modal-button"]').click({ force: true });
+
     cy.get('#modal-dropdown').shadow().find('input').click();
 
     // Ensure list items in the dropdown are visible

@@ -8,7 +8,6 @@ export default function Bug1308Page(props) {
     <div>
       <GoAFormItem label="Tuition">
         <GoAInput
-          value={value}
           name="tuition"
           leadingContent="$"
           trailingContent="ABCDE"

@@ -4,7 +4,6 @@ import { GoADropdown, GoADropdownItem, GoAFormItem } from '@abgov/react-componen
 export default function Bug1307Page() {
   const onChange = (event) => {
     // handle change
-    console.log(event.target.value);
   };
 
   return (

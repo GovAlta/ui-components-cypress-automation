@@ -9,7 +9,6 @@ export default function Bug1276Page(props) {
         <GoAInput
           name="input"
           width="20ch"
-          value={inputValue}
         />
       </GoAFormItem>
 
@@ -18,7 +17,6 @@ export default function Bug1276Page(props) {
         <GoATextarea
           name="textarea"
           width="60ch"
-          value={textareaValue}
         />
       </GoAFormItem>
     </div>

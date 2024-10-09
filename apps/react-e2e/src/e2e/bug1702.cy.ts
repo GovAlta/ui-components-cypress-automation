@@ -8,7 +8,7 @@ describe('Dropdown: Width does not match when specifying width in the component'
 
     // Visit the test page
     cy.visit('/bug1702');
-
+    cy.wait(1000)
     // Verify the width of the full-width dropdown and its popover
     // Verify the width of the full-width dropdown and its popover
     cy.get('#dropdown-full').shadow().find('goa-popover').invoke('width').should('equal', 1158);
@@ -32,6 +32,7 @@ describe('Dropdown: Width does not match when specifying width in the component'
   it('should verify that the popover width matches the dropdown width for 1440x900 viewport', () => {
     // Set the viewport size
     cy.viewport(1440, 900);
+    cy.wait(1000)
 
     // Visit the test page
     cy.visit('/bug1702');
