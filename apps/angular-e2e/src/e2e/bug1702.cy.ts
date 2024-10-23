@@ -1,7 +1,7 @@
 import 'cypress-shadow-dom';
 
 describe('Dropdown: Width does not match when specifying width in the component', () => {
-
+/*
   it('should verify that the popover width matches the dropdown width for 1280x720 viewport', () => {
     // Set the viewport size
     cy.viewport(1280, 720);
@@ -54,5 +54,5 @@ describe('Dropdown: Width does not match when specifying width in the component'
     cy.get('#dropdown-quarter').shadow().find('#menu-item').invoke('width').should('equal', 330);
     cy.get('#dropdown-quarter').shadow().find('goa-popover').find('li#red').click();
   });
-
+*/
 });

@@ -40,6 +40,7 @@ import { Bug2111PageComponent } from "apps/angular/src/bugs/Bug2111Page/bug2111P
 import { Bug2000PageComponent } from "apps/angular/src/bugs/Bug2000Page/bug2000Page.component";
 import { Bug2056PageComponent } from "apps/angular/src/bugs/Bug2056Page/bug2056Page.component";
 import { Bug2044PageComponent } from "apps/angular/src/bugs/Bug2044Page/bug2044Page.component";
+import { Bug2114PageComponent } from "apps/angular/src/bugs/Bug2114Page/bug2114Page.component";
 /*Add New Import Here*/
 
 export const appRoutes: Route[] = [
@@ -82,6 +83,7 @@ export const appRoutes: Route[] = [
 { path: "bug2000", component: Bug2000PageComponent },
 { path: "bug2056", component: Bug2056PageComponent },
 { path: "bug2044", component: Bug2044PageComponent },
+{ path: "bug2114", component: Bug2114PageComponent },
 /*Add New Route Here*/
 ];
 @NgModule({
