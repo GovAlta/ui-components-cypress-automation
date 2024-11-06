@@ -1,0 +1,54 @@
+<goa-container mt="m" mb="none">
+  <div style="padding: 40px;">
+    <goa-form-item
+      requirement="required"
+      mt="m"
+      label="Name of item"
+      [error]="taskError ? 'Please enter item name' : undefined"
+      helpText="Add an item to the dropdown list below">
+      <goa-input
+        name="item"
+        placeholder=""
+        [value]="newTask"
+        (_change)="onNewTaskChange($event)">
+      </goa-input>
+    </goa-form-item>
+
+    <goa-form-item mt="m" label="Add to">
+      <goa-radio-group
+        name="mountType"
+        [value]="mountType"
+        orientation="horizontal"
+        (_change)="onMountTypeChange($event)">
+        <goa-radio-item value="prepend" label="Start"></goa-radio-item>
+        <goa-radio-item value="append" label="End"></goa-radio-item>
+      </goa-radio-group>
+    </goa-form-item>
+
+    <goa-button-group alignment="start" gap="relaxed">
+      <goa-button mt="m" type="primary" (_click)="addTask()" testid="newItem">
+        Add new item
+      </goa-button>
+      <goa-button mt="m" type="tertiary" (_click)="reset()" testid="resetItem">
+        Reset list
+      </goa-button>
+    </goa-button-group>
+
+    <goa-divider mt="m"></goa-divider>
+    <goa-form-item mt="m" label="All items">
+      <ng-container *ngIf="renderTrigger">
+        <goa-dropdown
+          [value]="selectedTask"
+          name="selectedTask"
+          (_change)="onSelectedTaskChange($event)">
+          <goa-dropdown-item
+            *ngFor="let task of tasks; trackBy: trackByFn"
+            [value]="task.value"
+            [mount]="task.mount"
+            [label]="task.label">
+          </goa-dropdown-item>
+        </goa-dropdown>
+      </ng-container>
+    </goa-form-item>
+  </div>
+</goa-container>

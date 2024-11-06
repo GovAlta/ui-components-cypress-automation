@@ -1,48 +1,76 @@
-import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormGroup } from "@angular/forms";
+import { Component } from "@angular/core";
+
+type DropdownItemMountType = "append" | "prepend" | "reset";
+
+interface Task {
+  value: string;
+  label: string;
+  mount: DropdownItemMountType;
+}
 
 @Component({
   selector: "abgov-styles",
   templateUrl: "./bug2114Page.component.html",
 })
-export class Bug2114PageComponent implements OnInit {
-  changeForm: FormGroup;
-  parents = ["One", "Two", "Three"];
-  children: string[] = [];
-  selectedParent = "";
+export class Bug2114PageComponent {
+  tasks: Task[] = [
+      { label: "Finish Report", value: "finish-report", mount: "append" },
+      { label: "Attend Meeting", value: "attend-meeting", mount: "append" },
+      { label: "Reply Emails", value: "reply-emails", mount: "append" },
+    ];
+    newTask = "";
+    mountType: DropdownItemMountType = "append";
+    selectedTask = "";
+    taskError = false;
+    renderTrigger = true;
 
-  private childrenOne = ["Alpha", "Beta"];
-  private childrenTwo = ["Alpha", "Beta", "Gamma"];
-  private childrenThree = ["Alpha", "Gamma"];
+    constructor() {}
 
-  constructor(private fb: FormBuilder) {
-    this.changeForm = this.fb.group({
-      parentDropdown: [""],
-      childDropdown: [""],
-    });
-  }
-
-  ngOnInit() {
-    this.changeForm.get("parentDropdown")?.valueChanges.subscribe((value) => {
-      this.selectedParent = value;
-      this.loadChildren(value);
-      this.changeForm.get("childDropdown")?.reset("");
-    });
-  }
-
-  loadChildren(parentValue: string) {
-    switch (parentValue) {
-      case "One":
-        this.children = this.childrenOne;
-        break;
-      case "Two":
-        this.children = this.childrenTwo;
-        break;
-      case "Three":
-        this.children = this.childrenThree;
-        break;
-      default:
-        this.children = [];
+    onMountTypeChange(event: Event): void {
+      this.mountType = (event as CustomEvent).detail.value as DropdownItemMountType;
     }
-  }
+
+    onNewTaskChange(event: Event): void {
+      this.newTask = (event as CustomEvent).detail.value;
+      this.taskError = false;
+    }
+
+    onSelectedTaskChange(event: Event): void {
+      this.selectedTask = (event as CustomEvent).detail.value;
+    }
+
+    addTask(): void {
+      if (this.newTask === "") {
+        this.taskError = true;
+        return;
+      }
+      this.taskError = false;
+      const task: Task = {
+        label: this.newTask,
+        value: this.newTask.toLowerCase().replace(" ", "-"),
+        mount: this.mountType,
+      };
+      this.tasks =
+        this.mountType === "prepend" ? [task, ...this.tasks] : [...this.tasks, task];
+      this.newTask = "";
+    }
+
+    reset(): void {
+      this.newTask = "";
+      this.selectedTask = "";
+      this.taskError = false;
+      this.tasks = [];
+      this.forceRerender();
+    }
+
+    forceRerender(): void {
+      this.renderTrigger = false;
+      setTimeout(() => {
+        this.renderTrigger = true;
+      }, 0);
+    }
+
+    trackByFn(index: number, item: Task): string {
+      return item.value;
+    }
 }
