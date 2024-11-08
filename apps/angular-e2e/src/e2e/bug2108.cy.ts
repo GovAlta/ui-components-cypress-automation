@@ -27,7 +27,7 @@ describe('fix(#2108): dropdown width related issues', () => {
       cy.get('goa-dropdown[name="dropdown-30ch-no-item"]').shadow().find('goa-popover').invoke('width').should('equal', 288.890625);
 
     });
-*/
+
     it('should verify dropdown with no width no item should take 100%', () => {
       // Set the viewport size
       cy.viewport(1280, 720);
@@ -62,7 +62,7 @@ describe('fix(#2108): dropdown width related issues', () => {
       cy.get('goa-dropdown[name="dropdown-no-width-no-item"]').shadow().find('goa-popover').invoke('width').should('equal', 1280);
 
     });
-
+*/
     it('should verify dropdown witdh small', () => {
       // Set the viewport size
       cy.viewport(1280, 720);

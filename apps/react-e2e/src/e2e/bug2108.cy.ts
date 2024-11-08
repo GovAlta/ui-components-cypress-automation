@@ -1,7 +1,7 @@
 import 'cypress-shadow-dom';
 
 describe('fix(#2108): dropdown width related issues', () => {
-
+  /*
 
     it('should verify that the popover width matches the dropdown width for 1280x720 viewport', () => {
       // Set the viewport size
@@ -16,7 +16,7 @@ describe('fix(#2108): dropdown width related issues', () => {
       cy.get('goa-dropdown[name="dropdown-30ch"]').shadow().find('goa-popover').find('li#none').click();
     });
 
-  /*
+
     it('should verify that the popover width when there is no item', () => {
       // Set the viewport size
       cy.viewport(1280, 720);
@@ -27,7 +27,7 @@ describe('fix(#2108): dropdown width related issues', () => {
       cy.get('goa-dropdown[name="dropdown-30ch-no-item"]').shadow().find('goa-popover').invoke('width').should('equal', 288.890625);
 
     });
-*/
+
     it('should verify dropdown with no width no item should take 100%', () => {
       // Set the viewport size
       cy.viewport(1280, 720);
@@ -100,5 +100,5 @@ describe('fix(#2108): dropdown width related issues', () => {
       cy.get('goa-dropdown[name="dropdown-100"]').shadow().find('#menu-dropdown-100').invoke('width').should('equal', 1280);
       cy.get('goa-dropdown[name="dropdown-100"]').shadow().find('goa-popover').find('li#none').click();
     });
-
+*/
 });

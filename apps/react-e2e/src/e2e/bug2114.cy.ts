@@ -7,14 +7,15 @@ describe('dropdown dynamic items not updating', () => {
     cy.visit('/bug2114');
 
     // Open the dropdown by clicking the input field
-    cy.get('goa-input[name="item"]').shadow().find('input').type("End One");
+    cy.get('goa-input[name="item"]').shadow().find('input').type("End One", { delay: 100 });
     cy.get('[testid="newItem"]').shadow().find('button').click({ force: true });
     cy.get('goa-dropdown[name="selectedTask"]').shadow().find('input').click({ force: true });
     cy.get('goa-dropdown[name="selectedTask"]').shadow().find('goa-popover li').eq(-1).should('have.attr', 'id', 'end-one');
     cy.get('goa-dropdown[name="selectedTask"]').shadow().find('goa-popover li').eq(-1).click({ force: true });
 
     cy.get('goa-input[name="item"]').shadow().find('input').clear();
-    cy.get('goa-input[name="item"]').shadow().find('input').type("End Two");
+    cy.wait(500)
+    cy.get('goa-input[name="item"]').shadow().find('input').type("End Two", { delay: 100 });
     cy.get('[testid="newItem"]').shadow().find('button').click({ force: true });
     cy.get('goa-dropdown[name="selectedTask"]').shadow().find('input').click({ force: true });
     cy.get('goa-dropdown[name="selectedTask"]').shadow().find('goa-popover li').eq(-1).should('have.attr', 'id', 'end-two');
@@ -22,7 +23,9 @@ describe('dropdown dynamic items not updating', () => {
     cy.get('goa-dropdown[name="selectedTask"]').shadow().find('goa-popover li').eq(-1).click({ force: true });
 
 cy.get('goa-input[name="item"]').shadow().find('input').clear();
-    cy.get('goa-input[name="item"]').shadow().find('input').type("Start One");
+cy.wait(500)
+
+    cy.get('goa-input[name="item"]').shadow().find('input').type("Start One", { delay: 100 });
     cy.get('goa-radio-item[value="prepend"]').shadow().find('input').click({ force: true });
 
 
@@ -34,7 +37,9 @@ cy.get('goa-input[name="item"]').shadow().find('input').clear();
     cy.get('goa-dropdown[name="selectedTask"]').shadow().find('goa-popover li').eq(0).click({ force: true });
 
 cy.get('goa-input[name="item"]').shadow().find('input').clear();
-    cy.get('goa-input[name="item"]').shadow().find('input').type("Start Two");
+cy.wait(500)
+
+    cy.get('goa-input[name="item"]').shadow().find('input').type("Start Two", { delay: 100 });
     cy.get('[testid="newItem"]').shadow().find('button').click({ force: true });
     cy.get('goa-dropdown[name="selectedTask"]').shadow().find('goa-popover li').should('have.length', 7);
     cy.get('goa-dropdown[name="selectedTask"]').shadow().find('input').click({ force: true });
@@ -50,18 +55,26 @@ cy.get('goa-input[name="item"]').shadow().find('input').clear();
     //cy.get('goa-dropdown[name="selectedTask"]').shadow().find('input').click({ force: true });
     cy.get('goa-dropdown[name="selectedTask"]').shadow().find('goa-popover li').should('have.length', 0);
 cy.get('goa-input[name="item"]').shadow().find('input').clear();
-    cy.get('goa-input[name="item"]').shadow().find('input').type("Start One");
+cy.wait(500)
+
+    cy.get('goa-input[name="item"]').shadow().find('input').type("Start One", { delay: 100 });
     cy.get('[testid="newItem"]').shadow().find('button').click({ force: true });
 cy.get('goa-input[name="item"]').shadow().find('input').clear();
-    cy.get('goa-input[name="item"]').shadow().find('input').type("Start Two");
+cy.wait(500)
+
+    cy.get('goa-input[name="item"]').shadow().find('input').type("Start Two", { delay: 100 });
     cy.get('[testid="newItem"]').shadow().find('button').click({ force: true });
     cy.get('goa-radio-item[value="append"]').shadow().find('input').click({ force: true });
 
 cy.get('goa-input[name="item"]').shadow().find('input').clear();
-    cy.get('goa-input[name="item"]').shadow().find('input').type("End One");
+cy.wait(500)
+
+    cy.get('goa-input[name="item"]').shadow().find('input').type("End One", { delay: 100 });
     cy.get('[testid="newItem"]').shadow().find('button').click({ force: true });
 cy.get('goa-input[name="item"]').shadow().find('input').clear();
-    cy.get('goa-input[name="item"]').shadow().find('input').type("End Two");
+cy.wait(500)
+
+    cy.get('goa-input[name="item"]').shadow().find('input').type("End Two", { delay: 100 });
     cy.get('[testid="newItem"]').shadow().find('button').click({ force: true });
     cy.get('goa-dropdown[name="selectedTask"]').shadow().find('input').click({ force: true });
     cy.get('goa-dropdown[name="selectedTask"]').shadow().find('goa-popover li').should('have.length', 4);
