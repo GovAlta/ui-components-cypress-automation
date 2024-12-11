@@ -42,6 +42,8 @@ import Bug1703Page from "./bugs/Bug1703Page";
 import Bug2111Page from "./bugs/Bug2111Page";
 import Bug2000Page from "./bugs/Bug2000Page";
 import Bug2056Page from "./bugs/Bug2056Page";
+import Bug2114Page from "./bugs/Bug2114Page";
+import Bug2108Page from "./bugs/Bug2108Page";
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -86,6 +88,8 @@ root.render(
 <Route path="/bug2111" element={<Bug2111Page />}></Route>
 <Route path="/bug2000" element={<Bug2000Page />}></Route>
 <Route path="/bug2056" element={<Bug2056Page />}></Route>
+<Route path="/bug2114" element={<Bug2114Page />}></Route>
+<Route path="/bug2108" element={<Bug2108Page />}></Route>
 {/** Add more routes here */}
 
         </Routes>

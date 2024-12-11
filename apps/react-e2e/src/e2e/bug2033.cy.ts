@@ -1,7 +1,6 @@
 import 'cypress-shadow-dom';
 
 describe('Form Stepper: Step of -1 does not show the first page on page load', () => {
-/*
   it('should display the first page content on initial load', () => {
     // Visit the test page
     cy.visit('/bug2033');
@@ -13,5 +12,4 @@ describe('Form Stepper: Step of -1 does not show the first page on page load', (
     cy.contains('Page 1 content with status: incomplete').should('be.visible');
 
   });
-*/
 });
