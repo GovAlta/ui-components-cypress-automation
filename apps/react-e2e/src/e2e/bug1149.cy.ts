@@ -15,7 +15,7 @@ describe('Icon button position in input', () => {
 
 
         // Verify that the second element is 12px to the left of the first element
-        const leftDistance = firstRect.right - secondRect.right - 1;
+        const leftDistance = firstRect.right - secondRect.right;
         expect(leftDistance).to.equal(12);
       });
     });

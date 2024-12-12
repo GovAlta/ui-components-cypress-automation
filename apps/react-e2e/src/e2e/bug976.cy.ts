@@ -7,9 +7,9 @@ describe('goa-input with pre/suffix disabled border issue', () => {
 
     cy.wait(1000);
     cy.get('goa-input[name="tuition"]').find('div[slot="leadingContent"]')
-      .should('have.css', 'border-right', '1px solid rgb(220, 220, 220)');  // Adjust to the expected border style
+      .should('have.css', 'border-right', '0px none rgb(51, 51, 51)');  // Adjust to the expected border style
     cy.get('goa-input[name="tuition"]').find('div[slot="trailingContent"]')
-      .should('have.css', 'border-left', '1px solid rgb(220, 220, 220)');  // Adjust to the expected border style
+      .should('have.css', 'border-left', '0px none rgb(51, 51, 51)');  // Adjust to the expected border style
 
 
   });

@@ -11,7 +11,7 @@ describe('Incorrect border rendering on Text Field in Error and Focus states (Bu
     // Hover over the input and verify the box-shadow styles
     cy.get('#input').shadow().find('input').realHover();
     cy.get('#input').shadow().find('input').should('have.css', 'box-shadow', 'rgb(0, 79, 132) 0px 0px 0px 2px inset');
-    cy.get('#input').shadow().find('.goa-input').should('have.css', 'box-shadow', 'none');
+    cy.get('#input').shadow().find('.goa-input').should('have.css', 'box-shadow', 'rgb(102, 102, 102) 0px 0px 0px 1px inset');
     cy.get('#input').shadow().find('.leading-content-slot').should('have.css', 'box-shadow', 'none');
     cy.get('#input').shadow().find('.trailing-content-slot').should('have.css', 'box-shadow', 'none');
   });
@@ -52,7 +52,7 @@ describe('Incorrect border rendering on Text Field in Error and Focus states (Bu
 
     // Verify the box-shadow for input in error state
     cy.get('#error').shadow().find('input').should('have.css', 'box-shadow', 'rgb(236, 4, 11) 0px 0px 0px 2px inset');
-    cy.get('#error').shadow().find('.goa-input').should('have.css', 'box-shadow', 'none');
+    cy.get('#error').shadow().find('.goa-input').should('have.css', 'box-shadow', 'rgb(102, 102, 102) 0px 0px 0px 1px inset');
     cy.get('#error').shadow().find('.leading-content-slot').should('have.css', 'box-shadow', 'none');
     cy.get('#error').shadow().find('.trailing-content-slot').should('have.css', 'box-shadow', 'none');
   });

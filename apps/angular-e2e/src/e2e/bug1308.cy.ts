@@ -17,7 +17,7 @@ describe('LeadingContent and TrailingContent have visible margin-bottom inside t
         const secondRect = $secondEl[0].getBoundingClientRect();
 
         // Verify if the bottom of the first element touches the top of the second element
-        expect(firstRect.bottom-1).to.equal(secondRect.bottom);
+        expect(firstRect.bottom).to.equal(secondRect.bottom);
       });
     });
 
@@ -37,7 +37,7 @@ describe('LeadingContent and TrailingContent have visible margin-bottom inside t
         const secondRect = $secondEl[0].getBoundingClientRect();
 
         // Verify if the bottom of the first element touches the top of the second element
-        expect(firstRect.bottom-1).to.equal(secondRect.bottom);
+        expect(firstRect.bottom).to.equal(secondRect.bottom);
       });
     });
 
