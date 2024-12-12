@@ -9,10 +9,7 @@ export default function FormExample() {
 
       {/* Tuition Input */}
       <GoAFormItem label="Tuition">
-        <GoAInput value="" name="tuition" leadingContent="$" id="input">
-          <div slot="leadingContent">$</div>
-          <div slot="trailingContent">ABCD</div>
-        </GoAInput>
+        <GoAInput value="" name="tuition" leadingContent="$" id="input" trailingContent="ABCD" />
       </GoAFormItem>
 
       <hr />
@@ -25,10 +22,8 @@ export default function FormExample() {
           leadingContent="$"
           id="disabled"
           disabled={true} // Setting the input as disabled
-        >
-          <div slot="leadingContent">$</div>
-          <div slot="trailingContent">ABCD</div>
-        </GoAInput>
+          trailingContent="ABCD"
+        />
       </GoAFormItem>
 
       <hr />
@@ -41,10 +36,8 @@ export default function FormExample() {
           leadingContent="$"
           id="error"
           error={true} // Showing error state
-        >
-          <div slot="leadingContent">$</div>
-          <div slot="trailingContent">ABCD</div>
-        </GoAInput>
+          trailingContent="ABCD"
+        />
       </GoAFormItem>
     </div>
   );
